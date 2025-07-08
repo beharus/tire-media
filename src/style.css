@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .prime-container{
+    @apply max-w-[1920px] mx-auto;
+  }
+}
+
+@layer components {
+  .prime-title{
+    @apply font-semibold leading-[.8] text-[44px] md:text-[70px] lg:text-[100px] 2xl:text-[160px];
+  }
+  .nav-link{
+    @apply text-xl hover:underline text-black
+  }
+  .nav-dropdown{
+    @apply flex cursor-pointer gap-2 items-center text-xl text-black hover:underline
+  }
+  .header{
+    @apply fixed top-0 left-0 right-0 z-30 bg-white lg:transition-transform lg:duration-300 px-4 lg:px-8 py-4 lg:py-7 flex justify-between items-center
+  }
+  .header-logo{
+    @apply h-8 md:h-auto
+  }
+  .dropdown-content{
+    @apply absolute top-full mt-2 left-0 bg-white shadow-lg rounded-md p-6 flex flex-col gap-4 text-base text-black opacity-0 invisible transition-all duration-300 z-50 w-max
+  }
+  .nav-sublink{
+    @apply hover:underline block text-xl font-medium
+  }
+  .header-mobile{
+    @apply fixed bottom-5 right-4 lg:right-8 z-50 flex gap-4
+  }
+  .header-btn_mobile{
+    @apply py-4 px-5 md:px-8 font-semibold rounded-full border bg-black text-white hover:bg-white hover:text-black transition
+  }
+  .header-btn_menu{
+    @apply flex items-center gap-3 py-4 px-6 md:px-10 rounded-full bg-[#EDEDED] text-black font-semibold border border-[#EDEDED] transition;
+  }
+  .mobile-menu{
+    @apply absolute top-0 right-0 h-full w-full md:w-[600px] bg-white shadow-xl overflow-y-auto transform transition-transform duration-300 ease-in-out
+  }
+  .overlay{
+    @apply absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300
+  }
+  .nav-sublink_mobile{
+    @apply text-lg font-medium hover:underline
+  }
+  .nav-link_mobile{
+    @apply text-2xl hover:underline font-semibold
+  }
+  .nav-dropdown_mobile{
+    @apply cursor-pointer flex w-fit justify-between gap-3 items-center
+  }
+  .project-popup{
+    @apply absolute top-0 right-0 py-4 lg:py-10 px-4 lg:px-10 h-full w-full md:w-[780px] bg-white shadow-xl overflow-y-auto
+  }
+  .text-20{
+    @apply text-base lg:text-xl
+  }
+  .transparent-btn{
+    @apply py-5 px-8 font-semibold text-xl rounded-full border border-black duration-300 hover:bg-black hover:text-white
+  }
+  .form-input{
+    @apply w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded
+  }
+  .form-label{
+    @apply text-sm lg:text-lg block mb-2 lg:mb-3 font-medium
+  }
+  .form-select{
+    @apply border font-medium border-[#CDD0D6] rounded px-4 py-3.5 lg:px-5 lg:py-4 text-20 hover:border-[#CDD0D6] duration-300 hover:bg-black hover:text-white transition
+  }
+  .form-checkbox-container{
+    @apply flex items-start gap-2 text-xs lg:text-base mb-5 lg:mb-10 mt-10 lg:mt-20 font-medium
+  }
+  .black-btn{
+    @apply px-10 py-4 xl:py-7 xl:px-20 xl:text-xl bg-black text-white duration-300 hover:text-black hover:bg-transparent border border-black rounded-full
+  }
+  .big-text{
+    @apply xl:indent-[20vw] text-2xl md:text-4xl leading-[.9] text-black font-semibold xl:text-7xl
+  }
+  .big-text2{
+    @apply  text-2xl md:text-4xl leading-[.9] text-black font-semibold lg:text-5xl 2xl:text-7xl
+  }
+  .h2-title{
+    @apply text-sm md:text-base lg:text-lg border-black xl:absolute top-6 mb-5 font-semibold border-t w-fit pt-2
+  }
+  .h2-title2{
+    @apply border-black text-sm lg:text-lg font-semibold pt-2 lg:pt-2.5 border-t w-fit
+  }
+  .footer-main-text{
+    @apply font-semibold mb-6 text-base xl:text-lg text-[#A6ABB3]
+  }
+  .service-card{
+    @apply relative mx-auto w-full max-w-[440px] p-5 md:p-6 aspect-square overflow-hidden flex justify-between flex-col border border-[#CDD0D6]
+  }
+  .blog-swiper-big-img{
+    @apply md:h-[500px] h-[270px] w-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0
+  }
+  .blog-swiper-small-img{
+    @apply md:h-[400px] h-[270px] w-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0
+  }
+  .gray-dot{
+    @apply w-2 h-2 bg-[#CDD0D6] rounded-full
+  }
+  .case-bg-img{
+    @apply group-hover:scale-105 duration-300 absolute inset-0 object-cover w-full h-full -z-10
+  }
+  .moving-btn{
+    @apply pointer-events-none absolute z-20 text-white hidden md:block group-hover:block transition-opacity duration-300 opacity-0 group-hover:opacity-100 min-w-fit
+  }
+  .case-card-mini{
+    @apply cursor-pointer relative w-full min-h-[350px] flex items-end justify-center overflow-hidden
+  }
+  .card-subtitles{
+    @apply flex gap-2 md:gap-3 items-center flex-wrap text-[#A6ABB3]
+  }
+  .card-title{
+    @apply mt-1 md:mt-2 md:text-[22px] leading-[1.4] font-semibold
+  }
+  .case-card-big{
+    @apply cursor-pointer relative w-full min-h-[585px] flex items-end justify-center overflow-hidden
+  }
+  .case-card-big-innertext1{
+    @apply lg:text-[28px] text-xl font-semibold mb-1 lg:mb-3
+  }
+  .case-card-big-innertext2{
+    @apply font-medium text-xs md:text-base leading-[1.2]
+  }
+  .filter-item{
+    @apply lg:py-4 py-2 px-4 lg:px-6 lg:text-xl leading-[1.4] border cursor-pointer border-[#CDD0D6] w-fit rounded-full hover:bg-black hover:text-white duration-300
+  }
+  .filter-item--active{
+    @apply lg:py-4 py-2 px-4 lg:px-6 lg:text-xl leading-[1.4] w-fit cursor-pointer rounded-full bg-black text-white duration-300
+  }
+  .back-btn{
+    @apply flex gap-3 items-center font-semibold mb-5 lg:mb-20 lg:text-xl;
+  }
+  .italic-text{
+    @apply font-normal italic
+  }
+  .dropdown-button{
+    @apply text-4xl lg:text-6xl font-light flex justify-center items-center w-12 h-12 lg:w-[60px] lg:h-[60px] aspect-square border border-white rounded-full transition-transform duration-300
+  }
+  /* === New Section Types === */
+  .staggered-cards-section {
+    @apply prime-container min-h-screen relative py-20 lg:py-[200px] overflow-hidden px-4 lg:px-8;
+  }
+
+  .staggered-card {
+    @apply z-[2] w-full flex flex-col justify-between p-5 lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-[#CDD0D6] bg-white;
+  }
+
+  .staggered-card-number {
+    @apply w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#EDEDED] font-semibold lg:text-[22px] flex justify-center items-center;
+  }
+
+  /* === Icon Grid Section === */
+  .icon-grid-section {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-7 2xl:gap-y-14 gap-x-8;
+  }
+
+  .icon-feature-item {
+    @apply col-span-1;
+  }
+
+  .icon-feature-icon {
+    @apply w-9 object-contain lg:w-[60px];
+  }
+
+  /* === Example/CTA Section === */
+  .example-cta-section {
+    @apply prime-container relative px-4 lg:px-8 py-20 lg:py-[200px] bg-[#EDEDED] overflow-hidden;
+  }
+
+  /* === Team Member Card (for Swiper) === */
+  .swiper-team-card {
+    @apply min-w-[260px] max-w-[260px] sm:max-w-[320px] w-full py-5 snap-start;
+  }
+
+  /* === Price/Offer Section === */
+  .price-offer-section {
+    @apply prime-container relative py-20 lg:py-[200px] gap-y-10 bg-black px-4 lg:px-8 text-center;
+  }
+  .design-feature-section {
+    @apply prime-container min-h-screen relative py-20 lg:py-[200px] gap-y-10 bg-black px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-3;
+  }
+
+  .design-feature-item {
+    @apply col-span-1 flex flex-col gap-6 lg:gap-14;
+  }
+
+  .design-feature-image {
+    @apply aspect-video object-cover object-center w-full;
+  }
+
+  .contact-form-section {
+    @apply my-20 lg:my-[200px] px-4 lg:px-8;
+  }
+
+  .contact-form-container {
+    @apply prime-container border-t border-[#CDD0D6] mx-auto grid xl:grid-cols-2;
+  }
+
+  .contact-form-left {
+    @apply max-w-[650px] py-10;
+  }
+
+  .contact-form-right {
+    @apply py-10 border-l-0 xl:pl-8 xl:border-l border-y border-[#CDD0D6] xl:border-y-0;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 z-[99] flex justify-center md:items-center items-end bg-black/30 backdrop-blur-sm shadow-inner;
+  }
+
+  .modal-content {
+    @apply bg-white px-4 py-5 md:p-8 w-full md:w-fit md:rounded-xl text-center md:max-w-md shadow-lg;
+  }
+  /* Service Card Classes */
+  .service-card {
+    @apply relative mx-auto w-full max-w-[440px] p-5 md:p-6 aspect-square overflow-hidden flex justify-between flex-col border border-[#CDD0D6];
+  }
+
+  .service-card-title {
+    @apply text-base 2xl:text-[22px] leading-[1.4] font-semibold min-h-[.5rem];
+  }
+
+  .service-card-description {
+    @apply text-base 2xl:text-xl leading-[1.4] mt-3 md:max-h-0 md:opacity-0 overflow-hidden transition-all duration-500 ease-in-out group-hover:max-h-[300px] group-hover:opacity-100 transform-gpu md:translate-y-3 group-hover:translate-y-0;
+  }
+
+  /* Awards Section Classes */
+  .awards-section {
+    @apply w-full bg-[#EDEDED] relative py-20 lg:mt-[100px] mt-10 lg:py-[200px];
+  }
+
+  .award-item {
+    @apply border-t border-[#CDD0D6] py-4 lg:py-6 flex justify-between items-center gap-3;
+  }
+
+  .award-item-content {
+    @apply w-3/4 grid grid-cols-1 xl:grid-cols-6 items-center gap-3 flex-col lg:flex-row;
+  }
+
+  .award-title {
+    @apply font-medium leading-[1.4] xl:col-span-2 lg:text-[28px];
+  }
+
+  .award-description {
+    @apply font-medium leading-[1.4] xl:col-span-3 text-[#696969] text-sm lg:text-xl;
+  }
+
+  .award-date {
+    @apply font-medium leading-[1.4] text-[#696969] text-sm lg:text-xl;
+  }
+
+  .award-medal {
+    @apply w-10 h-10 md:w-[60px] md:h-[60px];
+  }
+  .media-tag {
+    @apply p-1 lg:p-2 bg-[#EDEDED] rounded-full flex lg:gap-5 gap-3 items-center w-fit;
+  }
+
+  .media-label {
+    @apply lg:text-xl font-medium mr-4 lg:mr-6;
+  }
+}
+
+*{
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+.floating-btn {
+  transform: translate(-50%, -50%);
+  transition: top 0.05s ease, left 0.05s ease;
+}
+/* Отключает анимацию и фиксирует header */
+.header-static {
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Custom styles for the partial card visibility */
+.teamSwiper {
+  padding: 0 20px !important; /* Space for partial cards */
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.swiper-slide-active,
+.swiper-slide-next,
+.swiper-slide-prev {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hide scrollbar */
+.teamSwiper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom grab cursor */
+.teamSwiper {
+  cursor: grab;
+}
+
+.teamSwiper:active {
+  cursor: grabbing;
+}
+
+.cases-slider {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Mobile - all slides equal */
+.cases-slider .swiper-slide {
+  width: 100%;
+}
+
+/* Tablet and desktop */
+@media (min-width: 768px) {
+  .cases-slider .swiper-slide {
+    width: calc(50% - 14px); /* accounting for gap */
+  }
+
+  .cases-slider .big-slide {
+    width: calc(100% - 14px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .cases-slider .swiper-slide {
+    width: calc(25% - 21px); /* accounting for gap */
+  }
+
+  .cases-slider .big-slide {
+    width: calc(50% - 21px);
+  }
+}
+@layer utilities {
+  .custom-counter {
+    counter-reset: section;
+    list-style: none;
+  }
+
+  .custom-counter > li {
+    counter-increment: section;
+  }
+
+  .custom-counter > li > ol {
+    counter-reset: subsection;
+    list-style: none;
+    margin-left: 2rem;
+  }
+
+  .custom-counter > li > ol > li {
+    position: relative;
+    padding-left: 3rem;
+  }
+
+  .custom-counter > li > ol > li::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    text-align: left;
+  }
+
+  .custom-counter > li > ol > li > ol {
+    counter-reset: subsubsection;
+    list-style: none;
+    margin-left: 2rem;
+  }
+
+  .custom-counter > li > ol > li > ol > li {
+    position: relative;
+    padding-left: 3.5rem;
+  }
+
+  .custom-counter > li > ol > li > ol > li::before {
+    counter-increment: subsubsection;
+    content: counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3.5rem;
+    text-align: left;
+  }
+}

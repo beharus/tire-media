@@ -1,0 +1,168 @@
+<header class="sticky-header fixed top-0 left-0 right-0 z-30 bg-white lg:transition-transform lg:duration-300 prime-container px-4 lg:px-8 py-4 lg:py-7 flex justify-between items-center">
+    <div class="logo">
+        <a href="/">
+            <img class="h-8 md:h-auto" src="/main-assets/Logo.svg" alt="Logo">
+        </a>
+    </div>
+    <nav class="menu hidden xl:flex gap-6">
+        <!-- УСЛУГИ -->
+        <div class="relative group dropdown-wrapper">
+            <div class="flex cursor-pointer gap-2 items-center text-xl text-black hover:underline dropdown-toggle">
+                <span>Услуги</span>
+                <img src="/Arrow%20down.svg" class="transition-transform duration-300 group-[.open]:rotate-180">
+            </div>
+            <div class="absolute top-full mt-2 left-0 bg-white shadow-lg rounded-md p-6 flex flex-col gap-4 text-base text-black opacity-0 invisible transition-all duration-300 dropdown-content z-50 w-max">
+                <a href="#" class="hover:underline block text-xl font-medium">Все услуги</a>
+                <a href="#" class="hover:underline block text-xl font-medium">SEO Продвижение</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Контекстная реклама</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Таргетированная реклама</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Медийная реклама</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Дизайн</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Комплексное продвижение</a>
+            </div>
+        </div>
+
+        <!-- АУДИТЫ -->
+        <div class="relative group dropdown-wrapper">
+            <div class="flex cursor-pointer gap-2 items-center text-xl text-black hover:underline dropdown-toggle">
+                <span>Аудиты</span>
+                <img src="/Arrow%20down.svg" class="transition-transform duration-300 group-[.open]:rotate-180">
+            </div>
+            <div class="absolute top-full mt-2 left-0 bg-white shadow-lg rounded-md p-6 flex flex-col gap-4 text-base text-black opacity-0 invisible transition-all duration-300 dropdown-content z-50 w-max">
+                <a href="#" class="hover:underline block text-xl font-medium">Полный SEO аудит сайта</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Полный аудит сайта по рекламе</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Технический аудит сайта</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Usability аудит сайта</a>
+                <a href="#" class="hover:underline block text-xl font-medium">Коммерческий аудит сайта</a>
+            </div>
+        </div>
+
+        <a class="text-xl hover:underline text-black" href="#">Кейсы</a>
+        <a class="text-xl hover:underline text-black" href="#">Блог</a>
+        <a class="text-xl hover:underline text-black" href="#">Агентство</a>
+        <a class="text-xl hover:underline text-black" href="#">Контакты</a>
+    </nav>
+    <div class="flex gap-6 items-center">
+        <a href="#" class=" text-base md:text-xl text-black hover:underline">+7 495 266-67-95</a>
+        <button data-popup="project" class="py-5 xl:block hidden px-8 font-semibold text-xl rounded-4xl border duration-300 hover:bg-black hover:text-white">Обсудить проект</button>
+    </div>
+    <!-- Кнопка меню -->
+    <div class="fixed bottom-5 right-4 lg:right-8 z-50 flex gap-4 xl:hidden">
+        <button id="menu-toggle"
+                class="flex items-center gap-3 py-4 px-6 md:px-10 rounded-4xl bg-[#EDEDED] text-black font-semibold text-base md:text-xl border border-[#EDEDED] transition">
+            <span id="menu-text">Меню</span>
+            <img id="menu-icon" src="/main-assets/Menu.svg" alt="Menu Icon" class="w-6 h-6">
+        </button>
+        <button
+                data-popup="project"
+                class="py-4 px-5 md:px-8 font-semibold text-base md:text-xl rounded-4xl border bg-black text-white hover:bg-white hover:text-black transition">
+            Обсудить проект
+        </button>
+    </div>
+
+    <!-- Контейнер меню и затемнения -->
+    <div id="mobile-menu-wrapper" class="fixed inset-0 z-40 hidden xl:hidden">
+        <!-- Оверлей -->
+        <div id="menu-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+
+        <!-- Само меню -->
+        <div id="mobile-menu"
+             class="absolute top-0 right-0 h-full w-full md:w-[600px] bg-white shadow-xl overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
+            <nav class="flex flex-col gap-6 p-6">
+                <!-- Услуги -->
+                <details class="group">
+                    <summary class="cursor-pointer text-2xl font-semibold flex justify-between gap-3 w-fit items-center">
+                        <span>Услуги</span>
+                        <img src="/Arrow%20down.svg" class="transition-transform group-open:rotate-180 w-4 h-4" />
+                    </summary>
+                    <div class="mt-5 flex flex-col gap-4">
+                        <a href="#" class="text-lg font-medium hover:underline">Все услуги</a>
+                        <a href="#" class="text-lg font-medium hover:underline">SEO Продвижение</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Контекстная реклама</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Таргетированная реклама</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Медийная реклама</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Дизайн</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Комплексное продвижение</a>
+                    </div>
+                </details>
+
+                <!-- Аудиты -->
+                <details class="group">
+                    <summary class="cursor-pointer text-2xl font-semibold flex w-fit justify-between gap-3 items-center">
+                        <span>Аудиты</span>
+                        <img src="/Arrow%20down.svg" class="transition-transform group-open:rotate-180 w-4 h-4" />
+                    </summary>
+                    <div class="mt-5 flex flex-col gap-4">
+                        <a href="#" class="text-lg font-medium hover:underline">Полный SEO аудит сайта</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Аудит рекламы</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Технический аудит</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Usability аудит</a>
+                        <a href="#" class="text-lg font-medium hover:underline">Коммерческий аудит</a>
+                    </div>
+                </details>
+
+                <!-- Ссылки -->
+                <a href="#" class="text-2xl hover:underline font-semibold">Кейсы</a>
+                <a href="#" class="text-2xl hover:underline font-semibold">Блог</a>
+                <a href="#" class="text-2xl hover:underline font-semibold">Агентство</a>
+                <a href="#" class="text-2xl hover:underline font-semibold">Контакты</a>
+            </nav>
+        </div>
+    </div>
+
+    <!--  project popup-->
+    <div id="project-popup-wrapper" class="fixed inset-0 z-[55] hidden">
+        <!-- Оверлей -->
+        <div id="project-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+
+        <div id="project-popup"
+             class="absolute top-0 right-0 py-4 lg:py-10 px-4 lg:px-10 h-full w-full md:w-[780px] bg-white shadow-xl overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex justify-end mb-4 lg:mb-8">
+                <div id="project-close" class="h-12 w-12 lg:w-[60px] lg:h-[60px] border rounded-full flex items-center justify-center">
+                    <img class="w-6 h-6 lg:w-8 lg:h-8" src="/main-assets/Close.svg">
+                </div>
+            </div>
+            <form>
+                <h1 class=" lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Оставьте заявку</h1>
+                <p class=" font-medium leading-[1.4] lg:text-xl mb-10">Заполните короткую форму и мы свяжемся с вами.</p>
+                <div class="flex mb-5 lg:mb-9 flex-col">
+                    <label class="text-sm lg:text-lg block mb-2 lg:mb-3 font-medium">Как вас зовут?</label>
+                    <input type="text" placeholder="Иванов Иван"
+                           class="w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded" />
+                </div>
+                <div class="flex mb-5 lg:mb-9 flex-col">
+                    <label class="text-sm lg:text-lg block mb-2 lg:mb-3 font-medium">Как с вами связаться?</label>
+                    <input type="text" placeholder="Почта, телефон или мессенджер"
+                           class="w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded" />
+                </div>
+                <div class="mb-5 lg:mb-10">
+                    <label class="text-sm lg:text-lg block mb-2 lg:mb-3 font-medium">О проекте</label>
+                    <textarea placeholder="Расскажите коротко о проекте"
+                              class="w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded h-[160px] resize-none"></textarea>
+                </div>
+                <div class="flex items-start gap-2 text-xs lg:text-base mb-5 lg:mb-10 mt-10 lg:mt-20 font-medium">
+                    <input type="checkbox" id="project-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
+                    <label for="project-consent">
+                        Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+                    </label>
+                </div>
+                <button id="project-submit" type="submit" class="px-10 py-4 xl:py-7 xl:px-20 xl:text-xl bg-black text-white duration-300 hover:text-black hover:bg-transparent border border-black rounded-full">Оставить заявку</button>
+            </form>
+            <div id="project-popup-error" class="h-screen overflow-hidden -mt-20 hidden justify-center items-center">
+                <div class="text-center">
+                    <h1 class=" lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Что-то пошло не так!</h1>
+                    <p class=" font-medium leading-[1.4] lg:text-xl mb-10">Просим извинения за неудобства. Попробуйте еще раз или вернитесь позже.</p>
+                    <button type="submit" class="px-10 py-4 xl:py-7 xl:px-20 xl:text-xl bg-black text-white duration-300 hover:text-black hover:bg-transparent border border-black rounded-full">Повторить</button>
+                </div>
+            </div>
+            <div id="project-popup-success" class="h-screen overflow-hidden -mt-20 hidden justify-center items-center">
+                <div class="text-center">
+                    <h1 class=" lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Заявка офомлена успешно!</h1>
+                    <p class=" font-medium leading-[1.4] lg:text-xl mb-10">В ближайшее время наш менеджер свяжется с вами.</p>
+                    <button type="submit" class="px-10 py-4 xl:py-7 xl:px-20 xl:text-xl bg-black text-white duration-300 hover:text-black hover:bg-transparent border border-black rounded-full">Хорошо</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
