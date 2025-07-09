@@ -468,6 +468,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// awars logic
+const awards = document.querySelectorAll(".awards");
+console.log(awards);
+awards.forEach((award) => {
+    const btn = award.querySelector(".show-more-awards"); // <-- fixed here
+    const hiddenAwards = award.querySelectorAll(".hidden-awards");
+
+    btn.addEventListener("click", () => {
+        const isHidden = hiddenAwards[0].classList.contains("hidden");
+
+        hiddenAwards.forEach((item) => {
+            item.classList.toggle("hidden");
+        });
+
+        btn.textContent = isHidden ? "Скрыть награды" : "Все награды";
+    });
+});
+
 
 //Vacancies popup
 // Popup logic
@@ -606,4 +624,5 @@ document
             }
         });
     });
+
 

@@ -56,7 +56,7 @@
     @apply cursor-pointer flex w-fit justify-between gap-3 items-center
   }
   .project-popup{
-    @apply absolute top-0 right-0 py-4 lg:py-10 px-4 lg:px-10 h-full w-full md:w-[780px] bg-white shadow-xl overflow-y-auto
+    @apply absolute top-0 right-0 py-4 lg:py-6 2xl:py-10 px-4 lg:px-6 2xl:px-10 h-full w-full md:w-[780px] bg-white shadow-xl overflow-y-auto
   }
   .text-20{
     @apply text-base lg:text-xl
@@ -65,31 +65,31 @@
     @apply py-5 px-8 font-semibold text-xl rounded-full border border-black duration-300 hover:bg-black hover:text-white
   }
   .form-input{
-    @apply w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded
+    @apply w-full border px-3 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-2.5 md:px-4 md:py-3 2xl:text-xl rounded
   }
   .form-label{
-    @apply text-sm lg:text-lg block mb-2 lg:mb-3 font-medium
+    @apply text-sm 2xl:text-lg block mb-2 xl:mb-3 font-medium
   }
   .form-select{
     @apply border font-medium border-[#CDD0D6] rounded px-4 py-3.5 lg:px-5 lg:py-4 text-20 hover:border-[#CDD0D6] duration-300 hover:bg-black hover:text-white transition
   }
   .form-checkbox-container{
-    @apply flex items-start gap-2 text-xs lg:text-base mb-5 lg:mb-10 mt-10 lg:mt-20 font-medium
-  }
-  .black-btn{
-    @apply px-10 py-4 xl:py-7 xl:px-20 xl:text-xl bg-black text-white duration-300 hover:text-black hover:bg-transparent border border-black rounded-full
+    @apply flex items-start gap-2 text-xs lg:text-sm 2xl:text-base mb-5 lg:mb-10 mt-8 lg:mt-14 2xl:mt-20 font-medium
   }
   .big-text{
-    @apply xl:indent-[20vw] text-2xl md:text-4xl leading-[.9] text-black font-semibold xl:text-7xl
+    @apply xl:indent-[20vw] text-2xl md:text-4xl lg:text-5xl leading-[.9] text-black font-semibold 2xl:text-7xl
   }
   .big-text2{
     @apply  text-2xl md:text-4xl leading-[.9] text-black font-semibold lg:text-5xl 2xl:text-7xl
   }
   .h2-title{
-    @apply text-sm md:text-base lg:text-lg border-black xl:absolute top-6 mb-5 font-semibold border-t w-fit pt-2
+    @apply text-sm md:text-base lg:text-lg border-black xl:absolute mt-2 2xl:top-6 mb-5 font-semibold border-t w-fit pt-2 lg:pt-2.5
+  }
+  .black-btn{
+    @apply px-10 py-4 2xl:py-7 2xl:px-20 2xl:text-xl bg-black text-white duration-300 hover:text-black hover:bg-transparent border border-black rounded-full
   }
   .h2-title2{
-    @apply border-black text-sm lg:text-lg font-semibold pt-2 lg:pt-2.5 border-t w-fit
+    @apply border-black text-sm md:text-base lg:text-lg font-semibold pt-2 lg:pt-2.5 border-t w-fit
   }
   .footer-main-text{
     @apply font-semibold mb-6 text-base xl:text-lg text-[#A6ABB3]
@@ -125,10 +125,10 @@
     @apply cursor-pointer relative w-full min-h-[585px] flex items-end justify-center overflow-hidden
   }
   .case-card-big-innertext1{
-    @apply lg:text-[28px] text-xl font-semibold mb-1 lg:mb-3
+    @apply 2xl:text-[28px] lg:text-2xl text-xl font-semibold mb-1 lg:mb-3
   }
   .case-card-big-innertext2{
-    @apply font-medium text-xs md:text-base leading-[1.2]
+    @apply font-medium text-xs md:text-base xl:text-base leading-[1.2]
   }
   .filter-item{
     @apply lg:py-4 py-2 px-4 lg:px-6 lg:text-xl leading-[1.4] border cursor-pointer border-[#CDD0D6] w-fit rounded-full hover:bg-black hover:text-white duration-300

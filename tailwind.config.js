@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme'
+
 export default {
   content: [
     './index.html',
@@ -7,14 +8,21 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{
-        "black": '#010101'
+      colors: {
+        black: '#010101'
       },
       maxWidth: {
-        "2xl": "104rem"
+        '2xl': '104rem'
+      },
+      maxHeight: {
+        screen: '100dvh', // 👈 добавляем поддержку max-h-screen с 100dvh
       },
       screens: {
-        '3xl': '1700px', // ✅ correct
+        ...defaultTheme.screens,
+        md: '770px',
+        lg: '1100px',
+        xl: '1350px',
+        '2xl': '1720px',
       },
     },
   },
