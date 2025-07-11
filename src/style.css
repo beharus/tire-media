@@ -335,6 +335,9 @@
   .header a.text-20{
     @apply text-[15px] lg:text-xl font-medium
   }
+  footer{
+    @apply pb-20 2xl:pb-5
+  }
 }
 
 *{
