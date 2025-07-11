@@ -13,25 +13,62 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Enable autoplay module
 Swiper.use([Autoplay]);
-
-// Marquee swiper init
 document.addEventListener('DOMContentLoaded', () => {
-    new Swiper('.marquee-swiper', {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 64,
-        speed: 4000,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: false,
+    const marquees = [];
+
+    document.querySelectorAll('.marquee-swiper').forEach(swiperEl => {
+        const swiper = new Swiper(swiperEl, {
+            slidesPerView: 'auto',
+            spaceBetween: 64,
+            speed: 4000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false,
+            },
+            freeMode: true,
+            freeModeMomentum: false,
+            allowTouchMove: false,
+            grabCursor: false,
+            loop: false,
+        });
+
+        // Save reference for later use
+        marquees.push({ el: swiperEl, swiper });
+    });
+
+    // ✅ Intersection Observer to control autoplay based on visibility
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                const marquee = marquees.find(m => m.el === entry.target);
+                if (!marquee) return;
+
+                if (entry.isIntersecting) {
+                    marquee.swiper.autoplay?.start();
+                } else {
+                    marquee.swiper.autoplay?.stop();
+                }
+            });
         },
-        freeMode: true,
-        freeModeMomentum: false,
-        allowTouchMove: false,
-        grabCursor: false,
+        {
+            threshold: 0.1 // Trigger when at least 10% is visible
+        }
+    );
+
+    marquees.forEach(marquee => observer.observe(marquee.el));
+
+    // ✅ Restart autoplay when tab becomes visible
+    document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+            marquees.forEach(({ swiper }) => {
+                swiper.autoplay?.stop();
+                swiper.autoplay?.start();
+            });
+        }
     });
 });
+
 
 
 // HEADER STARTS

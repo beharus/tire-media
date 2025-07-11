@@ -391,6 +391,7 @@ input:hover, textarea:hover{
   transition: none !important;
 }
 .marquee-swiper .swiper-slide {
+  will-change: transform;
   width: max-content !important;
 }
 
