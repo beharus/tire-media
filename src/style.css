@@ -408,10 +408,12 @@ input:hover, textarea:hover{
 .swiper-button-prev,
 .swiper-button-next {
   pointer-events: auto;
+  cursor:  pointer;
   z-index: 50;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active{
   background-color: #101010;
+  cursor: pointer;
 }
 /* Hide scrollbar */
 .teamSwiper::-webkit-scrollbar {
@@ -570,4 +572,10 @@ input[type="checkbox"]:checked::after {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
+}
+#project-close{
+  cursor: pointer;
+}
+.sticky.top-28.big-text2{
+  max-width: 850px;
 }

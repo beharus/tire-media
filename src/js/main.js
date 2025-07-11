@@ -642,28 +642,43 @@ document.addEventListener('DOMContentLoaded', ()=>{
             });
         });
 })
+// links
+document.addEventListener("DOMContentLoaded", () => {
+    const linksToOpenInNewTab = [
+        "/pages/tech-pages/consent.html",
+        "/pages/tech-pages/privacy-policy.html"
+    ];
+
+    document.querySelectorAll("a").forEach(link => {
+        const href = link.getAttribute("href");
+
+        if (href && linksToOpenInNewTab.includes(href)) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+        }
+    });
+});
+
 
 // Cookies
-
 const cookiesPopup = document.getElementById("cookies");
 const acceptBtn = document.getElementById("cookie-accept");
 
-// Show popup with animation after delay
-setTimeout(() => {
-    cookiesPopup.classList.remove("translate-y-full", "opacity-0");
-    cookiesPopup.classList.add("translate-y-0", "opacity-100");
-}, 1000); // 1 second delay
+// Show only if not already accepted
+if (cookiesPopup && localStorage.getItem("cookiesAccepted") !== "true") {
+    // Show popup with animation after delay
+    setTimeout(() => {
+        cookiesPopup.classList.remove("translate-y-full", "opacity-0");
+        cookiesPopup.classList.add("translate-y-0", "opacity-100");
+    }, 1000);
 
-// Hide popup on accept
-acceptBtn.addEventListener("click", () => {
-    cookiesPopup.classList.remove("translate-y-0", "opacity-100");
-    cookiesPopup.classList.add("translate-y-full", "opacity-0");
+    // Hide popup on accept
+    acceptBtn?.addEventListener("click", () => {
+        cookiesPopup.classList.remove("translate-y-0", "opacity-100");
+        cookiesPopup.classList.add("translate-y-full", "opacity-0");
 
-    // Optional: store in localStorage to remember consent
-    localStorage.setItem("cookiesAccepted", "true");
-});
-
-// Optional: check if already accepted
-if (localStorage.getItem("cookiesAccepted") === "true") {
-    cookiesPopup.style.display = "none";
+        localStorage.setItem("cookiesAccepted", "true");
+    });
+} else if (cookiesPopup) {
+    cookiesPopup.style.display = "none"; // optional: hide completely
 }
