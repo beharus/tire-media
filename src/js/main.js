@@ -498,4 +498,3 @@ acceptBtn.addEventListener("click", () => {
 if (localStorage.getItem("cookiesAccepted") === "true") {
     cookiesPopup.style.display = "none";
 }
-

@@ -45,6 +45,14 @@ function handleHeaderScroll() {
         header.style.transform = 'none';
     }
 
+    if (currentScroll > 50) {
+        header.style.background = 'white';
+        header.style.color = 'black';
+    }else{
+        header.style.background = 'transparent';
+        header.style.color = 'white';
+    }
+
     lastScroll = currentScroll;
 }
 
