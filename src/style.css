@@ -89,7 +89,7 @@
     @apply hover:underline block text-xl font-medium
   }
   .header-mobile{
-    @apply fixed bottom-5 right-4 lg:right-8 z-50 flex gap-4
+    @apply fixed w-full sm:w-fit flex justify-center sm:justify-end bottom-5 left-0 right-0 sm:left-auto sm:right-4 lg:right-8 z-50 flex gap-4
   }
   .header-btn_mobile{
     @apply py-4 px-5 md:px-8 font-semibold rounded-full border bg-black text-white hover:bg-white hover:text-black transition
@@ -332,6 +332,9 @@
   .media-label {
     @apply lg:text-xl font-medium mr-3 sm:mr-4 lg:mr-6;
   }
+  .header a.text-20{
+    @apply text-[15px] lg:text-xl font-medium
+  }
 }
 
 *{
@@ -369,23 +372,15 @@ input:hover, textarea:hover{
 .toggle-btn.text-4xl:hover{
   opacity: .7;
 }
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Disable user interaction for marquee */
+.marquee-swiper {
+  pointer-events: none;
 }
 
-.animate-marquee {
-  animation: marquee 25s linear infinite;
-  width: max-content;
-  display: flex;
+/* Linear scroll */
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }
-
-@media (max-width: 768px) {
-  .animate-marquee {
-    animation-duration: 20s;
-  }
-}
-
 .floating-btn {
   transform: translate(-50%, -50%);
   transition: top 0.05s ease, left 0.05s ease;
@@ -394,6 +389,9 @@ input:hover, textarea:hover{
 .header-static {
   transform: none !important;
   transition: none !important;
+}
+.marquee-swiper .swiper-slide {
+  width: max-content !important;
 }
 
 /* Custom styles for the partial card visibility */

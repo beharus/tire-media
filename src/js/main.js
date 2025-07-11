@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination,Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 // import 'swiper/css/navigation';
@@ -11,6 +11,28 @@ import '@fancyapps/ui/dist/fancybox/fancybox.css';
 import { Fancybox } from '@fancyapps/ui';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+// Enable autoplay module
+Swiper.use([Autoplay]);
+
+// Marquee swiper init
+document.addEventListener('DOMContentLoaded', () => {
+    new Swiper('.marquee-swiper', {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 64,
+        speed: 4000,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+        },
+        freeMode: true,
+        freeModeMomentum: false,
+        allowTouchMove: false,
+        grabCursor: false,
+    });
+});
+
 
 // HEADER STARTS
 document.addEventListener('DOMContentLoaded', () => {
@@ -237,7 +259,6 @@ const blogSwiper = new Swiper('.blog-swiper', {
     loop: false,
 });
 // BLOG ENDS
-
 // CASES STARTS
 document.querySelectorAll('.hover-part').forEach(card => {
     const floatingBtn = card.querySelector('.floating-btn');
@@ -642,6 +663,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
             });
         });
 })
+
+
+
 
 // Cookies
 const cookiesPopup = document.getElementById("cookies");
