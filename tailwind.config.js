@@ -24,6 +24,9 @@ export default {
         xl: '1350px',
         '2xl': '1720px',
       },
+      spacing: {
+        '20vh': '15vh',
+      },
     },
   },
   plugins: [],

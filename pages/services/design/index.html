@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Design</title> <link rel="stylesheet" href="/src/style.css">
+    <link rel="icon" href="/Favicon.svg" type="image/x-icon">
 </head>
 <body>
 <header class="sticky-header prime-container header">
@@ -153,9 +154,9 @@
                 </div>
                 <div class="form-checkbox-container">
                     <input type="checkbox" id="project-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="project-consent">
-                        Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#A6ABB3]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
                 <button id="project-submit" type="submit" class="black-btn">Оставить заявку</button>
@@ -178,8 +179,8 @@
     </div>
 </header>
 
-<main class="pt-[100px] xl:pt-[150px]">
-    <section class="prime-container min-h-screen py-5 lg:py-20 px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
+<main class="">
+    <section class="prime-container first-screen px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
         <aside>
             <a href="/pages/services/all-services.html" class="back-btn">
                 <img src="/main-assets/Left.svg">
@@ -282,55 +283,61 @@
         </div>
     </section>
 
-    <section class="my-20 lg:my-[200px] px-4 lg:px-8">
-        <div class="prime-container border-t border-[#CDD0D6] mx-auto grid xl:grid-cols-2">
-            <div class="max-w-[650px] py-10">
-                <p class="big-text2">Давайте <span class="italic-text">познакомимся</span> и <span class="italic-text">обсудим</span> ваш проект</p>
-                <p class="text-base mt-5 lg:mt-10 mb-5 lg:text-xl text-black leading-[1.6] font-medium">
+    <section class="my-20 lg:my-[200px] border-t border-[#CDD0D6]">
+        <div class="prime-container mx-auto grid xl:grid-cols-2">
+            <!-- Левая часть -->
+            <div class="max-w-[650px] py-10  px-4 lg:px-8">
+                <p class=" big-text indent-0">Давайте <span class="italic-text">познакомимся</span> и <span class="italic-text">обсудим</span> ваш проект аудит.</p>
+                <p class="mt-5 lg:mt-10 mb-5 text-20 text-black leading-[1.6] font-medium">
                     Заполните короткую форму и мы свяжемся с вами.
                 </p>
             </div>
 
-            <form class="contacts py-10 border-l-0 xl:pl-8 xl:border-l border-y border-[#CDD0D6] xl:border-y-0">
+            <!-- Правая часть -->
+            <form class="contacts space-y-6 py-10 border-l-0 px-4 lg:px-8 xl:pl-8 xl:border-l border-y xl:border-t-0 border-[#CDD0D6]">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                         <label class="form-label">Как вас зовут?</label>
-                        <input type="text" placeholder="Иванов Иван" class="form-input" />
+                        <input type="text" placeholder="Иванов Иван"
+                               class="form-input" />
                     </div>
                     <div>
                         <label class="form-label">Как с вами связаться?</label>
-                        <input type="text" placeholder="Почта, телефон или мессенджер" class="form-input" />
+                        <input type="text" placeholder="Почта, телефон или мессенджер"
+                               class="form-input" />
                     </div>
                 </div>
 
                 <div class="my-5 lg:my-10">
-                    <label class="form-label">О проекте</label>
-                    <textarea placeholder="Расскажите коротко о проекте" class="form-input h-[120px] resize-none"></textarea>
+                    <label class="form-label">Краткое описание задачи</label>
+                    <textarea placeholder="Расскажите коротко о проекте"
+                              class="form-input h-[120px] resize-none"></textarea>
                 </div>
 
-                <div class="form-checkbox-container">
+                <div class="flex items-start gap-2 text-xs lg:text-base pt-10 lg:pt-20 font-medium max-w-lg xl:max-w-none">
                     <input type="checkbox" id="consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="consent">
-                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#696969]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
-                <button type="submit" class="black-btn">Подать заявку на аудит</button>
+                <button type="submit" class="black-btn">Подать заявку</button>
             </form>
         </div>
-
+        <!-- Успешно -->
         <div id="audit-success" class="hidden fixed inset-0 z-[99] flex justify-center md:items-center items-end bg-black/30 backdrop-blur-sm shadow-inner">
             <div class="bg-white px-4 py-5 md:p-8 w-full md:w-fit md:rounded-xl text-center md:max-w-md shadow-lg">
-                <p class="card-title">Заявка офомлена успешно!</p>
+                <p class="text-xl lg:text-[28px] font-semibold mb-5">Заявка офомлена успешно!</p>
                 <p class="text-[#696969] font-medium md:text-xl">В ближайшее время наш менеджер свяжется с вами.</p>
-                <button class="black-btn mt-5 lg:mt-10" onclick="document.getElementById('audit-success').classList.add('hidden')">Хорошо</button>
+                <button class="mt-5 lg:mt-10 black-btn" onclick="document.getElementById('audit-success').classList.add('hidden')">Хорошо</button>
             </div>
         </div>
 
+        <!-- Ошибка -->
         <div id="audit-error" class="fixed hidden inset-0 z-[99] flex justify-center md:items-center items-end bg-black/30 backdrop-blur-sm shadow-inner">
             <div class="bg-white px-4 py-5 md:p-8 w-full md:w-fit md:rounded-xl text-center md:max-w-md shadow-lg">
-                <p class="card-title">Что-то пошло не так, <br> попробуйте еще раз</p>
-                <button class="black-btn mt-5 lg:mt-10" onclick="document.getElementById('audit-error').classList.add('hidden')">Повторить</button>
+                <p class="text-xl lg:text-[28px] font-semibold mb-4">Что-то пошло не так, <br> попробуйте еще раз</p>
+                <button class="mt-5 lg:mt-10 black-btn" onclick="document.getElementById('audit-error').classList.add('hidden')">Повторить</button>
             </div>
         </div>
     </section>
@@ -543,7 +550,7 @@
             <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">© 2024, Тире медиа</p>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/consent.html">Пользовательское соглашение</a>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/privacy-policy.html">Политика конфиденциальности</a>
-            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">Разработано <a target="_blank" href="https://webest.ru/" class="text-white">WEBEST</a></p>
+            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] flex items-center gap-2">Разработано <a target="_blank" href="https://webest.ru/" class="text-white"><img src="/main-assets/webest.svg"></a></p>
         </div>
     </div>
 </footer>

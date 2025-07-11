@@ -3,7 +3,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Contextual Advertising</title> <link rel="stylesheet" href="/src/style.css">
+    <title>Comprehensive Advertising</title> <link rel="stylesheet" href="/src/style.css">
+    <link rel="icon" href="/Favicon.svg" type="image/x-icon">
 </head>
 <body>
 <header class="sticky-header prime-container header">
@@ -153,9 +154,9 @@
                 </div>
                 <div class="form-checkbox-container">
                     <input type="checkbox" id="project-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="project-consent">
-                        Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#A6ABB3]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
                 <button id="project-submit" type="submit" class="black-btn">Оставить заявку</button>
@@ -177,9 +178,9 @@
         </div>
     </div>
 </header>
-<main class="pt-[100px] xl:pt-[150px]">
+<main class="">
     <!-- Hero Section -->
-    <section class="prime-container min-h-screen py-5 lg:py-20 px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
+    <section class="prime-container first-screen px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
         <aside>
             <a href="/pages/services/all-services.html" class="back-btn">
                 <img src="/main-assets/Left.svg">
@@ -274,27 +275,52 @@
     </section>
 
     <!-- Clients Section -->
-    <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex-wrap flex gap-12">
-        <h2 class="lg:max-w-[300px] w-fit leading-[1.2] h2-title2">Более 100 компаний доверяют «Тире медиа»</h2>
-        <div class="w-full xl:flex-1">
+    <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex flex-col xl:flex-row gap-12 overflow-hidden">
+        <!-- Heading -->
+        <h2 class="xl:max-w-[300px] h2-title2 shrink-0 self-start">
+            Более 100 компаний доверяют «Тире медиа»
+        </h2>
+
+        <!-- Logo Marquee -->
+        <div class="w-full flex-1">
             <section class="overflow-hidden relative w-full bg-white">
+                <!-- Left gradient mask -->
                 <div class="hidden lg:block absolute left-0 top-0 bottom-0 w-[200px] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+
+                <!-- Scrolling logos -->
                 <div class="relative flex gap-14 whitespace-nowrap animate-marquee will-change-transform">
+                    <!-- First copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
                     <img src="/main-assets/Putzmeister.svg" class="h-11" />
                     <img src="/main-assets/Severstal.svg" class="h-11" />
-                    <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/Лукоил.svg" class="h-11" />
-                    <!-- Repeated logos -->
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
+
+                    <!-- Second copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
+                    <img src="/main-assets/Putzmeister.svg" class="h-11" />
+                    <img src="/main-assets/Severstal.svg" class="h-11" />
+                    <img src="/main-assets/Лукоил.svg" class="h-11" />
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
                 </div>
             </section>
         </div>
     </section>
+
 
     <!-- Cases Section -->
     <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]">
@@ -478,8 +504,8 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]">
-        <p class="text-center text-2xl md:text-4xl leading-[.9] text-black text-whit font-semibold xl:text-7xl">Что пишут клиенты <span class="italic font-normal">о нас</span></p>
+    <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]" >
+        <h2 class="text-center big-text indent-0">Что пишут клиенты <span class="italic font-normal">о нас</span></h2>
         <div class="mt-10 lg:mt-[100px]">
             <div class="swiper testimonial-swiper relative px-4">
                 <div class="swiper-wrapper cursor-grab active:cursor-grabbing">
@@ -606,9 +632,16 @@
                 </div>
 
                 <!-- Pagination (dots) -->
-                <div class="testimonial-swiper-pagination"></div>
-                <div class="swiper-button-prev !left-0 z-10" ></div>
-                <div class="swiper-button-next !right-0 z-10" ></div>
+                <div class="testimonial-swiper-pagination flex lg:hidden justify-center mt-5"></div>
+
+
+                <div class="swiper-button-prev absolute hidden lg:flex top-1/2 left-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                </div>
+
+                <div class="swiper-button-next absolute hidden lg:flex top-1/2 right-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
             </div>
         </div>
     </section>
@@ -923,11 +956,6 @@
                     </div>
                 </div>
 
-                <div class="my-5 lg:my-10">
-                    <label class="form-label">Краткое описание задачи</label>
-                    <textarea placeholder="Расскажите коротко о задаче" class="form-input h-[120px] resize-none"></textarea>
-                </div>
-
                 <div>
                     <p class="form-label">Направление работ</p>
                     <div class="flex flex-wrap gap-1 md:gap-3">
@@ -940,11 +968,17 @@
                     </div>
                 </div>
 
-                <div class="form-checkbox-container max-w-lg xl:max-w-none">
+                <div class="my-5 lg:my-10">
+                    <label class="form-label">Краткое описание задачи</label>
+                    <textarea placeholder="Расскажите коротко о задаче" class="form-input h-[120px] resize-none"></textarea>
+                </div>
+
+
+                <div class="flex items-start gap-2 text-xs lg:text-base pt-10 lg:pt-20 font-medium max-w-lg xl:max-w-none">
                     <input type="checkbox" id="consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="consent">
-                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#696969]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
 
@@ -971,7 +1005,6 @@
     </section>
 
 </main>
-
 <footer class="bg-black text-white text-sm">
     <div class="prime-container px-4 lg:px-8 pt-10 lg:pt-[100px]">
         <!-- Top Section -->
@@ -1179,7 +1212,7 @@
             <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">© 2024, Тире медиа</p>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/consent.html">Пользовательское соглашение</a>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/privacy-policy.html">Политика конфиденциальности</a>
-            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">Разработано <a target="_blank" href="https://webest.ru/" class="text-white">WEBEST</a></p>
+            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] flex items-center gap-2">Разработано <a target="_blank" href="https://webest.ru/" class="text-white"><img src="/main-assets/webest.svg"></a></p>
         </div>
     </div>
 </footer>

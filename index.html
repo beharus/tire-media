@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/style.css" rel="stylesheet">
+  <link rel="icon" href="/Favicon.svg" type="image/x-icon">
 </head>
 <body>
 <header class="sticky-header prime-container header">
@@ -153,9 +154,9 @@
           </div>
           <div class="form-checkbox-container">
             <input type="checkbox" id="project-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-            <label for="project-consent">
-              Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
-              и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+            <label for="consent" class="text-[#A6ABB3]">
+              Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+              и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
             </label>
           </div>
           <button id="project-submit" type="submit" class="black-btn">Оставить заявку</button>
@@ -177,14 +178,14 @@
       </div>
   </div>
 </header>
-<main class="pt-[50px] lg:mt-[100px]">
-  <section class="w-full prime-container px-4 lg:px-8 py-10 lg:py-20 flex flex-col justify-between min-h-[600px] h-[85vh] max-h-[1000px]">
-    <div>
+<main class="">
+  <section class="w-full prime-container pt-10 first-screen px-4 lg:px-8 flex flex-col justify-between">
+    <div class="grow">
       <p class="prime-title">Меняем <br><span class="italic font-normal">акценты</span></p>
     </div>
-    <div class="flex justify-between xl:items-end flex-col-reverse xl:flex-row h-3/5 gap-y-10">
+    <div class="flex justify-between xl:items-end flex-col-reverse grow xl:flex-row h-3/5 gap-y-10">
       <div>
-        <h1 class=" font-bold text-xl lg:text-3xl mb-5 lg:mb-10">Агентство перфоманс-маркетинга</h1>
+        <h1 class=" font-bold text-xl lg:text-3xl mb-4 lg:mb-10 montserrat">Агентство перфоманс-маркетинга</h1>
       <p class="max-w-xl text-20 font-medium leading-[1.4]">Расставим правильные акценты в маркетинге вашего бизнеса через подбор каналов продвижения: <a class="underline" href="/pages/services/contextual-advertising/index.html">контекст</a> , <a class="underline" href="/pages/services/targeted-advertising/index.html">таргет</a>, <a class="underline" href="/pages/services/media-advertising/index.html">медиа</a>, <a class="underline" href="/pages/services/seo/index.html">SEO</a> и <a class="underline" href="/pages/services/comprehensive-promotion/index.html">комплекс</a>.</p>
       </div>
       <p class="text-right prime-title">Находим<br>точки роста</p>
@@ -286,31 +287,56 @@
         <p class="mt-5 lg:mt-12 text-20 leading-[1.4] mb-1">Александров Александр</p>
         <p class=" lg:text-lg leading-[1.2] mb-5 lg:mb-10 text-[#696969]">Управляющий партнер</p>
         <p class="lg:text-lg leading-[1.2] mb-2 text-[#696969]">Делюсь экспертизой, кейсами и просто жизнью в своем тг-канале</p>
-        <a href="https://t.me/a2exandrov_live" target="_blank" class="text-20 leading-[1.4]">@a2exandrov_live <img src="/main-assets/Telegram.svg" class="ml-1 inline-block align-text-center w-4 h-4 lg:w-5 lg:h-5"></a>
+        <a href="https://t.me/a2exandrov_live" target="_blank" class="text-20 leading-[1.4] hover:underline">@a2exandrov_live <img src="/main-assets/Telegram.svg" class="ml-1 inline-block align-text-center w-4 h-4 lg:w-5 lg:h-5"></a>
       </aside>
     </div>
   </section>
-  <section class="w-full prime-container py-20 lg:py-[200px] px-4 lg:px-8 flex-wrap flex gap-12">
-    <h2 class="lg:max-w-[300px] h2-title2">Более 100 компаний доверяют «Тире медиа»</h2>
-      <div class="w-full xl:flex-1">
-        <section class="overflow-hidden relative w-full bg-white">
-          <div class="hidden lg:block absolute left-0 top-0 bottom-0 w-[200px] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div class="relative flex gap-14 whitespace-nowrap animate-marquee will-change-transform">
-            <img src="/main-assets/Bauer.svg" class="h-11" />
-            <img src="/main-assets/idg%202.svg" class="h-11" />
-            <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
-            <img src="/main-assets/Putzmeister.svg" class="h-11" />
-            <img src="/main-assets/Severstal.svg" class="h-11" />
-            <img src="/main-assets/Bauer.svg" class="h-11" />
-            <img src="/main-assets/Лукоил.svg" class="h-11" />
-            <!-- Повтор логотипов -->
-            <img src="/main-assets/Bauer.svg" class="h-11" />
-            <img src="/main-assets/idg%202.svg" class="h-11" />
-            <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
-          </div>
-        </section>
-      </div>
+  <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex flex-col xl:flex-row gap-12 overflow-hidden">
+    <!-- Heading -->
+    <h2 class="xl:max-w-[300px] h2-title2 shrink-0 self-start">
+      Более 100 компаний доверяют «Тире медиа»
+    </h2>
+
+    <!-- Logo Marquee -->
+    <div class="w-full flex-1">
+      <section class="overflow-hidden relative w-full bg-white">
+        <!-- Left gradient mask -->
+        <div class="hidden lg:block absolute left-0 top-0 bottom-0 w-[200px] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+
+        <!-- Scrolling logos -->
+        <div class="relative flex gap-14 whitespace-nowrap animate-marquee will-change-transform">
+          <!-- First copy -->
+          <img src="/main-assets/Bauer.svg" class="h-11" />
+          <img src="/main-assets/idg%202.svg" class="h-11" />
+          <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
+          <img src="/main-assets/Putzmeister.svg" class="h-11" />
+          <img src="/main-assets/Severstal.svg" class="h-11" />
+          <img src="/main-assets/Лукоил.svg" class="h-11" />
+          <img src="/main-assets/Etaji.svg" class="h-11" />
+          <img src="/main-assets/Beauty.svg" class="h-11" />
+          <img src="/main-assets/Izmailovo.svg" class="h-11" />
+          <img src="/main-assets/Mait.svg" class="h-11" />
+          <img src="/main-assets/mazaltovman.svg" class="h-11" />
+          <img src="/main-assets/Touchon.svg" class="h-11" />
+
+          <!-- Second copy -->
+          <img src="/main-assets/Bauer.svg" class="h-11" />
+          <img src="/main-assets/idg%202.svg" class="h-11" />
+          <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
+          <img src="/main-assets/Putzmeister.svg" class="h-11" />
+          <img src="/main-assets/Severstal.svg" class="h-11" />
+          <img src="/main-assets/Лукоил.svg" class="h-11" />
+          <img src="/main-assets/Etaji.svg" class="h-11" />
+          <img src="/main-assets/Beauty.svg" class="h-11" />
+          <img src="/main-assets/Izmailovo.svg" class="h-11" />
+          <img src="/main-assets/Mait.svg" class="h-11" />
+          <img src="/main-assets/mazaltovman.svg" class="h-11" />
+          <img src="/main-assets/Touchon.svg" class="h-11" />
+        </div>
+      </section>
+    </div>
   </section>
+
   <section class="w-full relative prime-container px-4 lg:px-8 py-[60px] lg:py-[120px]">
     <div class="relative">
       <h2 class=" h2-title">Кейсы</h2>
@@ -626,7 +652,7 @@
     </div>
     <!-- Заголовок и стрелки -->
     <div class="w-full lg:w-1/2 max-w-[900px] flex gap-8 items-center justify-between ml-auto my-5 lg:my-[100px]">
-      <p class="font-medium text-20 max-w-[450px] w-full">
+      <p class="font-medium text-20 max-w-[535px] w-full">
         Делимся с вами нашим видением и нашими рассуждениями о настоящем и будущем маркетинга.
       </p>
     </div>
@@ -715,10 +741,10 @@
       <a href="/pages/blog/blog.html" class="black-btn">Больше статей</a>
     </div>
   </section>
-  <section class="mb-20 lg:mb-[200px] px-4 lg:px-8">
-    <div class="prime-container border-t border-[#CDD0D6] mx-auto grid xl:grid-cols-2">
+  <section class="mb-20 lg:mb-[200px] border-t border-[#CDD0D6]">
+    <div class="prime-container mx-auto grid xl:grid-cols-2">
       <!-- Левая часть -->
-      <div class="max-w-[650px] py-10">
+      <div class="max-w-[650px] py-10 px-4 lg:px-8">
         <p class=" text-2xl md:text-4xl leading-[.9] text-black font-semibold xl:text-7xl">Вам точно нужен <span class="italic font-normal">аудит.</span></p>
         <p class=" mt-5 lg:mt-10 mb-5 text-20 text-black leading-[1.6] font-medium">
           Чтобы предложить вам эффективное решение, которое улучшит ваш маркетинг, нужны вводные данные.
@@ -733,7 +759,7 @@
       </div>
 
       <!-- Правая часть -->
-      <form class="contacts space-y-6 py-10 border-l-0 xl:pl-8 xl:border-l border-y border-[#CDD0D6] xl:border-y-0">
+      <form class="contacts space-y-6 py-10 border-l-0 px-4 lg:px-8 xl:pl-8 xl:border-l border-y xl:border-t-0 border-[#CDD0D6]">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label class="form-label">Как вас зовут?</label>
@@ -777,9 +803,9 @@
 
         <div class="flex items-start gap-2 text-xs lg:text-base mt-10 lg:mt-20 max-w-lg xl:max-w-none font-medium">
           <input type="checkbox" id="consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-          <label for="consent">
-            Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline">обработку персональных данных</a>
-            и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline">политикой в отношении обработки персональных данных</a>
+          <label for="consent" class="text-[#A6ABB3]">
+            Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+            и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
           </label>
         </div>
         <button type="submit" class="black-btn">Подать заявку на аудит</button>
@@ -802,6 +828,17 @@
       </div>
     </div>
   </section>
+<!--  cookies-->
+  <div id="cookies" class="fixed right-0 bottom-0 md:right-4 md:bottom-4 2xl:right-8 2xl:bottom-8 bg-black text-white 2xl:p-8 px-4 py-5 max-w-[655px] translate-y-full opacity-0 transition-all duration-500">
+    <p class="text-xs md:text-base">
+      Этот сайт использует сервис веб-аналитики Яндекс Метрика, предоставляемый компанией ООО «ЯНДЕКС», 119021, Россия, Москва, ул. Л. Толстого, 16 (далее — Яндекс), счетчик «top.mail.ru» и cookie файлы.
+    </p>
+    <div class="flex gap-2 mt-5">
+      <button id="cookie-accept" class="border border-white px-6 py-4 2xl:px-8 2xl:py-5 rounded-full bg-white hover:bg-transparent text-black hover:text-white duration-300" type="button">Согласен</button>
+      <a class="border border-white px-6 py-4 2xl:px-8 2xl:py-5 rounded-full hover:bg-white bg-transparent hover:text-black text-white duration-300" href="/pages/tech-pages/cookies.html">Подробнее</a>
+    </div>
+  </div>
+
 </main>
 <footer class="bg-black text-white text-sm">
   <div class="prime-container px-4 lg:px-8 pt-10 lg:pt-[100px]">
@@ -1010,7 +1047,7 @@
       <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">© 2024, Тире медиа</p>
         <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/consent.html">Пользовательское соглашение</a>
         <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/privacy-policy.html">Политика конфиденциальности</a>
-      <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">Разработано <a target="_blank" href="https://webest.ru/" class="text-white">WEBEST</a></p>
+      <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] flex items-center gap-2">Разработано <a target="_blank" href="https://webest.ru/" class="text-white"><img src="/main-assets/webest.svg"></a></p>
     </div>
   </div>
 </footer>

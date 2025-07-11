@@ -3,7 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Contextual Advertising</title> <link rel="stylesheet" href="/src/style.css">
+    <title>Media Advertising</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="icon" href="/Favicon.svg" type="image/x-icon">
 </head>
 <body>
 
@@ -154,9 +156,9 @@
                 </div>
                 <div class="form-checkbox-container">
                     <input type="checkbox" id="project-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="project-consent">
-                        Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#A6ABB3]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
                 <button id="project-submit" type="submit" class="black-btn">Оставить заявку</button>
@@ -178,8 +180,8 @@
         </div>
     </div>
 </header>
-<main class="pt-[100px] xl:pt-[150px]">
-    <section class="prime-container min-h-screen py-5 lg:py-20 px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
+<main class="">
+    <section class="prime-container first-screen px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
         <aside>
             <a href="/pages/services/all-services.html" class="back-btn">
                 <img src="/main-assets/Left.svg" />
@@ -261,7 +263,7 @@
 
         <p class="text-center text-white font-semibold text-2xl md:text-4xl xl:text-7xl leading-[.9]">Какие задачи решаем</p>
 
-        <div class="pt-10 z-10 lg:pt-[100px] flex items-center flex-col xl:flex-row gap-y-4">
+        <div class="pt-10 z-10 lg:pt-[100px] flex justify-center flex-col xl:flex-row gap-y-4">
             <!-- Card 1 -->
             <div class="staggered-card bg-black border-white/30">
                 <div class="staggered-card-number text-white bg-[#FFFFFF1F]">1</div>
@@ -272,7 +274,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="staggered-card bg-black border-white/30 xl:-mx-20 xl:mt-[220px]">
+            <div class="staggered-card bg-black border-white/30 xl:-mx-20 xl:mt-[180px]">
                 <div class="staggered-card-number text-white bg-[#FFFFFF1F]">2</div>
                 <div>
                     <p class="font-semibold mb-3 text-white lg:text-[22px]">Получить заявки</p>
@@ -281,7 +283,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="staggered-card bg-black border-white/30 xl:mt-[440px]">
+            <div class="staggered-card bg-black border-white/30 xl:mt-[360px]">
                 <div class="staggered-card-number text-white bg-[#FFFFFF1F]">3</div>
                 <div>
                     <p class="font-semibold mb-3 text-white lg:text-[22px]">Организовать дистрибуцию контента</p>
@@ -294,27 +296,52 @@
     </section>
 
     <!-- Clients Section -->
-    <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex-wrap flex gap-12">
-        <h2 class="lg:max-w-[300px] w-fit leading-[1.2] h2-title2">Более 100 компаний доверяют «Тире медиа»</h2>
-        <div class="w-full xl:flex-1">
+    <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex flex-col xl:flex-row gap-12 overflow-hidden">
+        <!-- Heading -->
+        <h2 class="xl:max-w-[300px] h2-title2 shrink-0 self-start">
+            Более 100 компаний доверяют «Тире медиа»
+        </h2>
+
+        <!-- Logo Marquee -->
+        <div class="w-full flex-1">
             <section class="overflow-hidden relative w-full bg-white">
+                <!-- Left gradient mask -->
                 <div class="hidden lg:block absolute left-0 top-0 bottom-0 w-[200px] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+
+                <!-- Scrolling logos -->
                 <div class="relative flex gap-14 whitespace-nowrap animate-marquee will-change-transform">
+                    <!-- First copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
                     <img src="/main-assets/Putzmeister.svg" class="h-11" />
                     <img src="/main-assets/Severstal.svg" class="h-11" />
-                    <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/Лукоил.svg" class="h-11" />
-                    <!-- Repeated logos -->
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
+
+                    <!-- Second copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
+                    <img src="/main-assets/Putzmeister.svg" class="h-11" />
+                    <img src="/main-assets/Severstal.svg" class="h-11" />
+                    <img src="/main-assets/Лукоил.svg" class="h-11" />
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
                 </div>
             </section>
         </div>
     </section>
+
 
     <!-- Cases Section -->
     <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]">
@@ -498,8 +525,8 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]">
-        <p class="text-center text-2xl md:text-4xl leading-[.9] text-black text-whit font-semibold xl:text-7xl">Что пишут клиенты <span class="italic font-normal">о нас</span></p>
+    <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]" >
+        <h2 class="text-center big-text indent-0">Что пишут клиенты <span class="italic font-normal">о нас</span></h2>
         <div class="mt-10 lg:mt-[100px]">
             <div class="swiper testimonial-swiper relative px-4">
                 <div class="swiper-wrapper cursor-grab active:cursor-grabbing">
@@ -626,9 +653,16 @@
                 </div>
 
                 <!-- Pagination (dots) -->
-                <div class="testimonial-swiper-pagination"></div>
-                <div class="swiper-button-prev !left-0 z-10" ></div>
-                <div class="swiper-button-next !right-0 z-10" ></div>
+                <div class="testimonial-swiper-pagination flex lg:hidden justify-center mt-5"></div>
+
+
+                <div class="swiper-button-prev absolute hidden lg:flex top-1/2 left-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                </div>
+
+                <div class="swiper-button-next absolute hidden lg:flex top-1/2 right-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
             </div>
         </div>
     </section>
@@ -1058,60 +1092,65 @@
         </div>
     </section>
 
-    <section class="mb-20 lg:mb-[200px] px-4 lg:px-8">
-        <div class="prime-container border-t border-[#CDD0D6] mx-auto grid xl:grid-cols-2">
-            <div class="max-w-[650px] py-10">
-                <p class="big-text2">Давайте <span class="italic-text">познакомимся</span> и <span class="italic-text">обсудим</span> ваш проект</p>
-                <p class="text-base mt-5 lg:mt-10 mb-5 lg:text-xl text-black leading-[1.6] font-medium">
+    <section class="mb-20 lg:mb-[200px] border-t border-[#CDD0D6]">
+        <div class="prime-container mx-auto grid xl:grid-cols-2">
+            <!-- Левая часть -->
+            <div class="max-w-[650px] py-10  px-4 lg:px-8">
+                <p class=" big-text indent-0">Давайте <span class="italic-text">познакомимся</span> и <span class="italic-text">обсудим</span> ваш проект аудит.</p>
+                <p class="mt-5 lg:mt-10 mb-5 text-20 text-black leading-[1.6] font-medium">
                     Заполните короткую форму и мы свяжемся с вами.
                 </p>
             </div>
 
-            <form class="contacts py-10 border-l-0 xl:pl-8 xl:border-l border-y border-[#CDD0D6] xl:border-y-0">
+            <!-- Правая часть -->
+            <form class="contacts space-y-6 py-10 border-l-0 px-4 lg:px-8 xl:pl-8 xl:border-l border-y xl:border-t-0 border-[#CDD0D6]">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                         <label class="form-label">Как вас зовут?</label>
-                        <input type="text" placeholder="Иванов Иван" class="form-input" />
+                        <input type="text" placeholder="Иванов Иван"
+                               class="form-input" />
                     </div>
                     <div>
                         <label class="form-label">Как с вами связаться?</label>
-                        <input type="text" placeholder="Почта, телефон или мессенджер" class="form-input" />
+                        <input type="text" placeholder="Почта, телефон или мессенджер"
+                               class="form-input" />
                     </div>
                 </div>
 
                 <div class="my-5 lg:my-10">
-                    <label class="form-label">О проекте</label>
-                    <textarea placeholder="Расскажите коротко о проекте" class="form-input h-[120px] resize-none"></textarea>
+                    <label class="form-label">Краткое описание задачи</label>
+                    <textarea placeholder="Расскажите коротко о проекте"
+                              class="form-input h-[120px] resize-none"></textarea>
                 </div>
 
-                <div class="form-checkbox-container">
+                <div class="flex items-start gap-2 text-xs lg:text-base pt-10 lg:pt-20 font-medium max-w-lg xl:max-w-none">
                     <input type="checkbox" id="consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="consent">
-                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#696969]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
-                <button type="submit" class="black-btn">Подать заявку на аудит</button>
+                <button type="submit" class="black-btn">Подать заявку</button>
             </form>
         </div>
-
+        <!-- Успешно -->
         <div id="audit-success" class="hidden fixed inset-0 z-[99] flex justify-center md:items-center items-end bg-black/30 backdrop-blur-sm shadow-inner">
             <div class="bg-white px-4 py-5 md:p-8 w-full md:w-fit md:rounded-xl text-center md:max-w-md shadow-lg">
-                <p class="card-title">Заявка офомлена успешно!</p>
+                <p class="text-xl lg:text-[28px] font-semibold mb-5">Заявка офомлена успешно!</p>
                 <p class="text-[#696969] font-medium md:text-xl">В ближайшее время наш менеджер свяжется с вами.</p>
-                <button class="black-btn mt-5 lg:mt-10" onclick="document.getElementById('audit-success').classList.add('hidden')">Хорошо</button>
+                <button class="mt-5 lg:mt-10 black-btn" onclick="document.getElementById('audit-success').classList.add('hidden')">Хорошо</button>
             </div>
         </div>
 
+        <!-- Ошибка -->
         <div id="audit-error" class="fixed hidden inset-0 z-[99] flex justify-center md:items-center items-end bg-black/30 backdrop-blur-sm shadow-inner">
             <div class="bg-white px-4 py-5 md:p-8 w-full md:w-fit md:rounded-xl text-center md:max-w-md shadow-lg">
-                <p class="card-title">Что-то пошло не так, <br> попробуйте еще раз</p>
-                <button class="black-btn mt-5 lg:mt-10" onclick="document.getElementById('audit-error').classList.add('hidden')">Повторить</button>
+                <p class="text-xl lg:text-[28px] font-semibold mb-4">Что-то пошло не так, <br> попробуйте еще раз</p>
+                <button class="mt-5 lg:mt-10 black-btn" onclick="document.getElementById('audit-error').classList.add('hidden')">Повторить</button>
             </div>
         </div>
     </section>
 </main>
-
 <footer class="bg-black text-white text-sm">
     <div class="prime-container px-4 lg:px-8 pt-10 lg:pt-[100px]">
         <!-- Top Section -->
@@ -1319,7 +1358,7 @@
             <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">© 2024, Тире медиа</p>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/consent.html">Пользовательское соглашение</a>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/privacy-policy.html">Политика конфиденциальности</a>
-            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">Разработано <a target="_blank" href="https://webest.ru/" class="text-white">WEBEST</a></p>
+            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] flex items-center gap-2">Разработано <a target="_blank" href="https://webest.ru/" class="text-white"><img src="/main-assets/webest.svg"></a></p>
         </div>
     </div>
 </footer>

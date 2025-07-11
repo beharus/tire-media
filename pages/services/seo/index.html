@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>SEO</title> <link rel="stylesheet" href="/src/style.css">
+    <link rel="icon" href="/Favicon.svg" type="image/x-icon">
 </head>
 <body>
 <header class="sticky-header prime-container header">
@@ -153,9 +154,9 @@
                 </div>
                 <div class="form-checkbox-container">
                     <input type="checkbox" id="project-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="project-consent">
-                        Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#A6ABB3]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
                 <button id="project-submit" type="submit" class="black-btn">Оставить заявку</button>
@@ -177,8 +178,8 @@
         </div>
     </div>
 </header>
-<main class="pt-[100px] xl:pt-[150px]">
-    <section class="prime-container min-h-screen py-5 lg:py-20 px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
+<main class="">
+    <section class="prime-container first-screen px-4 lg:px-8 gap-28 grid grid-cols-1 lg:grid-cols-2">
         <aside>
             <a href="/pages/services/all-services.html" class="back-btn">
                 <img src="/main-assets/Left.svg">
@@ -191,24 +192,25 @@
             <img src="/seo-assets/seo.png" class="max-w-md mx-auto lg:max-w-none w-full object-contain">
         </aside>
     </section>
-    <section class="prime-container min-h-screen relative py-20 lg:py-[200px] overflow-hidden bg-black px-4 lg:px-8">
+
+    <section class="prime-container relative py-20 lg:py-[200px] overflow-hidden bg-black px-4 lg:px-8">
         <p class="text-center indent-0 text-white big-text">Какие задачи решаем</p>
-        <div class="pt-10 z-10 lg:pt-[100px] flex items-center flex-col xl:flex-row gap-y-4">
-            <div class="bg-black z-[2] w-full flex flex-col justify-between p-5 lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30">
+        <div class="z-10 flex justify-center mt-10 lg:mt-[100px] h-fit flex-col xl:flex-row gap-y-4 relative">
+            <div class="bg-black z-[2] w-full flex flex-col justify-between p-5 lg:p-6 mx-auto max-w-[700px] h-[340px] lg:h-[440px] border border-white/30">
                 <div class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center">1</div>
                 <div>
                     <p class="font-semibold mb-3 lg:text-[22px] text-white">Набрать подписчиков</p>
                     <p class="text-[#696969] font-medium text-sm lg:text-base max-w-sm">Приведем целевых подписчиков дешевле, чем получают ваши конкуренты</p>
                 </div>
             </div>
-            <div class="bg-black xl:-mx-20 z-[2] xl:mt-[220px] w-full flex flex-col justify-between p-5 lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30">
+            <div class="bg-black xl:-mx-20 z-[2] xl:mt-[180px] w-full flex flex-col justify-between p-5 mx-auto lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30">
                 <div class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center">2</div>
                 <div>
                     <p class="font-semibold mb-3 lg:text-[22px] text-white">Получить заявки</p>
                     <p class="text-[#696969] font-medium text-sm lg:text-base max-w-sm">Запустим рекламу на сайт и выполним план по стоимости и количеству заявок</p>
                 </div>
             </div>
-            <div class="bg-black z-[2] xl:mt-[440px] w-full flex flex-col justify-between p-5 lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30">
+            <div class="bg-black z-[2] xl:mt-[360px] w-full flex flex-col justify-between p-5 mx-auto lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-white/30">
                 <div class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#FFFFFF1F] text-white font-semibold lg:text-[22px] flex justify-center items-center">3</div>
                 <div>
                     <p class="font-semibold mb-3 lg:text-[22px] text-white">Организовать дистрибуцию контента</p>
@@ -218,6 +220,7 @@
         </div>
         <img src="/seo-assets/bg-vectors.png" class="absolute inset-0 w-full h-full object-cover object-center z-[1]"/>
     </section>
+
     <section class="w-full relative prime-container px-4 lg:px-8 py-20 lg:py-[200px]">
         <div class="relative">
             <h2 class=" h2-title">Услуги</h2>
@@ -233,8 +236,8 @@
                 <div class="z-[2]">
                     <p class="lg:mb-10 mb-5 text-4xl font-semibold">от 30 000 ₽</p>
                     <div class="flex gap-2">
-                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                        <a href="/pages/services/seo/Продвижение-по-Яндексу.html" class=" text-center p-5 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                        <a href="/pages/services/seo/Продвижение-по-Яндексу.html" class=" text-center p-5 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -247,8 +250,8 @@
                 <div class="z-[2]">
                     <p class="lg:mb-10 mb-5 text-4xl font-semibold">от 30 000 ₽</p>
                     <div class="flex gap-2">
-                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                        <a href="/pages/services/seo/Продвижение-по-Google.html" class=" text-center p-5 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                        <a href="/pages/services/seo/Продвижение-по-Google.html" class=" text-center p-5 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -261,8 +264,8 @@
                 <div class="z-[2]">
                     <p class="lg:mb-10 mb-5 text-4xl font-semibold">от 30 000 ₽</p>
                     <div class="flex gap-2">
-                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                        <a href="/pages/services/seo/Продвижение-по-позициям.html" class=" text-center p-5 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                        <a href="/pages/services/seo/Продвижение-по-позициям.html" class=" text-center p-5 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -275,8 +278,8 @@
                 <div class="z-[2]">
                     <p class="lg:mb-10 mb-5 text-4xl font-semibold">от 30 000 ₽</p>
                     <div class="flex gap-2">
-                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                        <a href="/pages/services/seo/Продвижение-по-трафику.html" class=" text-center p-5 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                        <a href="/pages/services/seo/Продвижение-по-трафику.html" class=" text-center p-5 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -289,8 +292,8 @@
                 <div class="z-[2]">
                     <p class="lg:mb-10 mb-5 text-4xl font-semibold">от 30 000 ₽</p>
                     <div class="flex gap-2">
-                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                        <a href="/pages/services/seo/Tilda.html" class=" text-center p-5 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                        <button data-popup="project" class=" p-5 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                        <a href="/pages/services/seo/Tilda.html" class=" text-center p-5 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -309,8 +312,8 @@
                             <div class="z-[2]">
                                 <p class="lg:mb-10 mb-5 text-xl font-semibold">от 30 000 ₽</p>
                                 <div class="flex flex-col gap-2">
-                                    <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                                    <a href="/pages/services/seo/Продвижение-по-Яндексу.html" class=" text-center p-4 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                                    <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                                    <a href="/pages/services/seo/Продвижение-по-Яндексу.html" class=" text-center p-4 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -325,8 +328,8 @@
                         <div class="z-[2]">
                             <p class="lg:mb-10 mb-5 text-xl font-semibold">от 30 000 ₽</p>
                             <div class="flex flex-col gap-2">
-                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                                <a href="/pages/services/seo/Продвижение-по-Google.html" class=" text-center p-4 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                                <a href="/pages/services/seo/Продвижение-по-Google.html" class=" text-center p-4 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -342,8 +345,8 @@
                         <div class="z-[2]">
                             <p class="lg:mb-10 mb-5 text-xl font-semibold">от 30 000 ₽</p>
                             <div class="flex flex-col gap-2">
-                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                                <a href="/pages/services/seo/Продвижение-по-позициям.html" class=" text-center p-4 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                                <a href="/pages/services/seo/Продвижение-по-позициям.html" class=" text-center p-4 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -359,8 +362,8 @@
                         <div class="z-[2]">
                             <p class="lg:mb-10 mb-5 text-xl font-semibold">от 30 000 ₽</p>
                             <div class="flex flex-col gap-2">
-                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                                <a href="/pages/services/seo/Продвижение-по-трафику.html" class=" text-center p-4 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                                <a href="/pages/services/seo/Продвижение-по-трафику.html" class=" text-center p-4 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -376,8 +379,8 @@
                         <div class="z-[2]">
                             <p class="lg:mb-10 mb-5 text-xl font-semibold">от 30 000 ₽</p>
                             <div class="flex flex-col gap-2">
-                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black bg-black">Оставить заявку</button>
-                                <a href="/pages/services/seo/Tilda.html" class=" text-center p-4 border font-semibold rounded-full grow border-black ">Подробнее</a>
+                                <button data-popup="project" class=" p-4 border text-white rounded-full grow border-black hover:bg-transparent hover:text-black duration-300 xl:text-xl font-[600] bg-black">Оставить заявку</button>
+                                <a href="/pages/services/seo/Tilda.html" class=" text-center p-4 border rounded-full grow border-black  duration-300 xl:text-xl font-[600] hover:bg-black hover:text-white">Подробнее</a>
                             </div>
                         </div>
                     </div>
@@ -434,23 +437,47 @@
         </div>
     </section>
 
-    <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex-wrap flex gap-12">
-        <h2 class="lg:max-w-[300px] h2-title2">Более 100 компаний доверяют «Тире медиа»</h2>
-        <div class="w-full xl:flex-1">
+    <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex flex-col xl:flex-row gap-12 overflow-hidden">
+        <!-- Heading -->
+        <h2 class="xl:max-w-[300px] h2-title2 shrink-0 self-start">
+            Более 100 компаний доверяют «Тире медиа»
+        </h2>
+
+        <!-- Logo Marquee -->
+        <div class="w-full flex-1">
             <section class="overflow-hidden relative w-full bg-white">
+                <!-- Left gradient mask -->
                 <div class="hidden lg:block absolute left-0 top-0 bottom-0 w-[200px] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+
+                <!-- Scrolling logos -->
                 <div class="relative flex gap-14 whitespace-nowrap animate-marquee will-change-transform">
+                    <!-- First copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
                     <img src="/main-assets/Putzmeister.svg" class="h-11" />
                     <img src="/main-assets/Severstal.svg" class="h-11" />
-                    <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/Лукоил.svg" class="h-11" />
-                    <!-- Повтор логотипов -->
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
+
+                    <!-- Second copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
+                    <img src="/main-assets/Putzmeister.svg" class="h-11" />
+                    <img src="/main-assets/Severstal.svg" class="h-11" />
+                    <img src="/main-assets/Лукоил.svg" class="h-11" />
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
                 </div>
             </section>
         </div>
@@ -635,6 +662,8 @@
         </div>
     </section>
 
+
+
     <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]" >
         <h2 class="text-center big-text indent-0">Что пишут клиенты <span class="italic font-normal">о нас</span></h2>
         <div class="mt-10 lg:mt-[100px]">
@@ -763,12 +792,21 @@
                 </div>
 
                 <!-- Pagination (dots) -->
-                <div class="testimonial-swiper-pagination"></div>
-                <div class="swiper-button-prev !left-0 z-10" ></div>
-                <div class="swiper-button-next !right-0 z-10" ></div>
+                <div class="testimonial-swiper-pagination flex lg:hidden justify-center mt-5"></div>
+
+
+                <div class="swiper-button-prev absolute hidden lg:flex top-1/2 left-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                </div>
+
+                <div class="swiper-button-next absolute hidden lg:flex top-1/2 right-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
             </div>
         </div>
     </section>
+
+
 
     <section id="awards" class="awards awards-section">
         <div class="prime-container px-4 lg:px-8">
@@ -1053,7 +1091,7 @@
             <h2 class="lg:sticky top-[150px] border-white text-sm md:text-base lg:text-lg text-white mb-5 font-semibold border-t w-fit pt-2">Частые вопросы</h2>
         </div>
         <div class="col-span-1">
-            <div class="lg:py-10 py-5 border-t">
+            <div class="lg:py-10 py-5 border-t border-white/30">
                 <div class="flex justify-between gap-5 items-center text-white">
                     <p class="text-xl font-semibold leading-[1.4] lg:text-[28px]">Когда мой сайт попадет в ТОП?</p>
                     <button
@@ -1070,7 +1108,7 @@
                     </p>
                 </div>
             </div>
-            <div class="lg:py-10 py-5 border-t">
+            <div class="lg:py-10 py-5 border-t border-white/30">
                 <div class="flex justify-between gap-5 items-center text-white">
                     <p class="text-xl font-semibold leading-[1.4] lg:text-[28px]">Что входит в стоимость услуг?</p>
                     <button
@@ -1087,7 +1125,7 @@
                     </p>
                 </div>
             </div>
-            <div class="lg:py-10 py-5 border-t">
+            <div class="lg:py-10 py-5 border-t border-white/30">
                 <div class="flex justify-between gap-5 items-center text-white">
                     <p class="text-xl font-semibold leading-[1.4] lg:text-[28px]">По каким KPI я могу оценивать работу SEO-специалиста?</p>
                     <button
@@ -1104,7 +1142,7 @@
                     </p>
                 </div>
             </div>
-            <div class="lg:py-10 py-5 border-t">
+            <div class="lg:py-10 py-5 border-t border-white/30">
                 <div class="flex justify-between gap-5 items-center text-white">
                     <p class="text-xl font-semibold leading-[1.4] lg:text-[28px]">В процессе оптимизации сайта могут потребоваться технические доработки. Кто их будет выполнять?</p>
                     <button
@@ -1121,7 +1159,7 @@
                     </p>
                 </div>
             </div>
-            <div class="lg:py-10 py-5 border-y">
+            <div class="lg:py-10 py-5 border-y border-white/30">
                 <div class="flex justify-between gap-5 items-center text-white">
                     <p class="text-xl font-semibold leading-[1.4] lg:text-[28px]">Что нужно с моей стороны для продвижения сайта?</p>
                     <button
@@ -1226,10 +1264,10 @@
             </a>
         </div>
     </section>
-    <section class="mb-20 lg:mb-[200px] px-4 lg:px-8">
-        <div class="prime-container border-t border-[#CDD0D6] mx-auto grid xl:grid-cols-2">
+    <section class="mb-20 lg:mb-[200px] border-t border-[#CDD0D6]">
+        <div class="prime-container mx-auto grid xl:grid-cols-2">
             <!-- Левая часть -->
-            <div class="max-w-[650px] py-10">
+            <div class="max-w-[650px] py-10  px-4 lg:px-8">
                 <p class=" big-text indent-0">Давайте <span class="italic-text">познакомимся</span> и <span class="italic-text">обсудим</span> ваш проект аудит.</p>
                 <p class="mt-5 lg:mt-10 mb-5 text-20 text-black leading-[1.6] font-medium">
                     Заполните короткую форму и мы свяжемся с вами.
@@ -1237,7 +1275,7 @@
             </div>
 
             <!-- Правая часть -->
-            <form class="contacts space-y-6 py-10 border-l-0 xl:pl-8 xl:border-l border-y border-[#CDD0D6] xl:border-y-0">
+            <form class="contacts space-y-6 py-10 border-l-0 px-4 lg:px-8 xl:pl-8 xl:border-l border-y xl:border-t-0 border-[#CDD0D6]">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                         <label class="form-label">Как вас зовут?</label>
@@ -1259,9 +1297,9 @@
 
                 <div class="flex items-start gap-2 text-xs lg:text-base pt-10 lg:pt-20 font-medium max-w-lg xl:max-w-none">
                     <input type="checkbox" id="consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="consent">
-                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#696969]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
                 <button type="submit" class="black-btn">Подать заявку</button>
@@ -1492,7 +1530,7 @@
             <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">© 2024, Тире медиа</p>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/consent.html">Пользовательское соглашение</a>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/privacy-policy.html">Политика конфиденциальности</a>
-            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">Разработано <a target="_blank" href="https://webest.ru/" class="text-white">WEBEST</a></p>
+            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] flex items-center gap-2">Разработано <a target="_blank" href="https://webest.ru/" class="text-white"><img src="/main-assets/webest.svg"></a></p>
         </div>
     </div>
 </footer>

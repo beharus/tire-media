@@ -1,5 +1,12 @@
 import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
 import 'swiper/css';
+// import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+Swiper.use([Navigation, Pagination]);
+
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 import { Fancybox } from '@fancyapps/ui';
 import AOS from 'aos';
@@ -169,6 +176,7 @@ function handleHeaderScroll() {
             header.style.transform = 'translateY(-100%)';
         } else {
             header.style.transform = 'translateY(0)';
+            header.style.backgroundColor = 'white';
         }
     } else {
         header.style.transform = 'none';
@@ -181,16 +189,12 @@ window.addEventListener('scroll', handleHeaderScroll);
 window.addEventListener('resize', handleHeaderScroll);
 
 // DROPDOWN
-
 const dropdowns = document.querySelectorAll('.dropdown-wrapper');
 
 dropdowns.forEach(wrapper => {
-    const toggle = wrapper.querySelector('.dropdown-toggle');
     const content = wrapper.querySelector('.dropdown-content');
 
-    toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-
+    wrapper.addEventListener('mouseenter', () => {
         // Закрываем все, кроме текущего
         dropdowns.forEach(w => {
             if (w !== wrapper) {
@@ -200,27 +204,20 @@ dropdowns.forEach(wrapper => {
             }
         });
 
-        const isOpen = wrapper.classList.toggle('open');
-
-        if (isOpen) {
-            content.classList.remove('opacity-0', 'invisible');
-            content.classList.add('opacity-100', 'visible');
-        } else {
-            content.classList.remove('opacity-100', 'visible');
-            content.classList.add('opacity-0', 'invisible');
-        }
+        wrapper.classList.add('open');
+        content.classList.remove('opacity-0', 'invisible');
+        content.classList.add('opacity-100', 'visible');
     });
-});
 
-// Клик вне дропдауна закрывает всё
-document.addEventListener('click', () => {
-    dropdowns.forEach(wrapper => {
+    wrapper.addEventListener('mouseleave', () => {
         wrapper.classList.remove('open');
-        const content = wrapper.querySelector('.dropdown-content');
         content.classList.remove('opacity-100', 'visible');
         content.classList.add('opacity-0', 'invisible');
     });
 });
+
+// ❌ Удаляем клик вне, т.к. теперь всё на hover
+// document.addEventListener('click', ...);
 
 //HEADER ENDS
 
@@ -380,8 +377,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (!slide.classList.contains('swiper-slide-active') &&
                         !slide.classList.contains('swiper-slide-next') &&
                         !slide.classList.contains('swiper-slide-prev')) {
-                        slide.style.opacity = '0.6';
-                        slide.style.transform = 'scale(0.9)';
                     }
                 });
             },
@@ -390,8 +385,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (!slide.classList.contains('swiper-slide-active') &&
                         !slide.classList.contains('swiper-slide-next') &&
                         !slide.classList.contains('swiper-slide-prev')) {
-                        slide.style.opacity = '0.6';
-                        slide.style.transform = 'scale(0.9)';
                     } else {
                         slide.style.opacity = '1';
                         slide.style.transform = 'scale(1)';
@@ -451,10 +444,6 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 'auto',
         loop: true,
         spaceBetween: 28,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
         breakpoints: {
             320: {
                 slidesPerView: 1,
@@ -470,7 +459,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // awars logic
 const awards = document.querySelectorAll(".awards");
-console.log(awards);
 awards.forEach((award) => {
     const btn = award.querySelector(".show-more-awards"); // <-- fixed here
     const hiddenAwards = award.querySelectorAll(".hidden-awards");
@@ -486,143 +474,28 @@ awards.forEach((award) => {
     });
 });
 
+// Cookies
 
-//Vacancies popup
-// Popup logic
-const popupWrapper = document.getElementById("vacancy-popup-wrapper");
-const overlay = document.getElementById("vacancy-overlay");
-const popup = document.getElementById("vacancy-popup");
-const openButtons = document.querySelectorAll(".toggle-content .open-btn");
-const closeBtn = document.getElementById("vacancy-close");
+const cookiesPopup = document.getElementById("cookies");
+const acceptBtn = document.getElementById("cookie-accept");
 
-// Popups inside form
-const form = document.querySelector("#vacancy-popup form");
-const success = document.getElementById("vacancy-popup-success");
-const error = document.getElementById("vacancy-popup-error");
+// Show popup with animation after delay
+setTimeout(() => {
+    cookiesPopup.classList.remove("translate-y-full", "opacity-0");
+    cookiesPopup.classList.add("translate-y-0", "opacity-100");
+}, 1000); // 1 second delay
 
-// Inputs
-const nameInput = form.querySelector('input[placeholder*="Иванов Иван"]');
-const contactInput = form.querySelector('input[placeholder*="Почта"]');
-const textInput = form.querySelector('textarea');
-const fileInput = form.querySelector('input[type="file"]');
-const checkInput = document.getElementById("vacancy-consent");
+// Hide popup on accept
+acceptBtn.addEventListener("click", () => {
+    cookiesPopup.classList.remove("translate-y-0", "opacity-100");
+    cookiesPopup.classList.add("translate-y-full", "opacity-0");
 
-// Open popup
-openButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        popupWrapper.classList.remove("hidden");
-        setTimeout(() => {
-            overlay.classList.add("opacity-100");
-            popup.classList.remove("translate-x-full");
-        }, 10);
-    });
+    // Optional: store in localStorage to remember consent
+    localStorage.setItem("cookiesAccepted", "true");
 });
 
-// Close popup function
-function closePopup() {
-    overlay.classList.remove("opacity-100");
-    popup.classList.add("translate-x-full");
-    setTimeout(() => {
-        popupWrapper.classList.add("hidden");
-        resetPopup();
-    }, 300);
+// Optional: check if already accepted
+if (localStorage.getItem("cookiesAccepted") === "true") {
+    cookiesPopup.style.display = "none";
 }
-
-// Reset form and popup states
-function resetPopup() {
-    form.classList.remove("hidden");
-    success.classList.add("hidden");
-    error.classList.add("hidden");
-    form.reset();
-
-    [nameInput, contactInput, textInput].forEach((el) =>
-        el.classList.remove("border-red-500")
-    );
-    checkInput.classList.remove("ring-2", "ring-red-500");
-}
-
-// Close on background or close button
-overlay.addEventListener("click", closePopup);
-closeBtn.addEventListener("click", closePopup);
-
-// Submit with validation
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    let hasError = false;
-
-    // Validate Name
-    if (nameInput.value.trim() === "") {
-        nameInput.classList.add("border-red-500");
-        hasError = true;
-    } else {
-        nameInput.classList.remove("border-red-500");
-    }
-
-    // Validate Contact
-    if (contactInput.value.trim() === "") {
-        contactInput.classList.add("border-red-500");
-        hasError = true;
-    } else {
-        contactInput.classList.remove("border-red-500");
-    }
-
-    // Validate "О себе"
-    if (textInput.value.trim() === "") {
-        textInput.classList.add("border-red-500");
-        hasError = true;
-    } else {
-        textInput.classList.remove("border-red-500");
-    }
-
-    // Validate consent checkbox
-    if (!checkInput.checked) {
-        checkInput.classList.add("ring-2", "ring-red-500");
-        hasError = true;
-    } else {
-        checkInput.classList.remove("ring-2", "ring-red-500");
-    }
-
-    // Optional: validate file
-    if (fileInput.files.length === 0) {
-      fileInput.classList.add("border-red-500");
-      hasError = true;
-    } else {
-      fileInput.classList.remove("border-red-500");
-    }
-
-    if (hasError) return;
-
-    // Simulate success or failure
-    const simulateSuccess = true;
-
-    form.classList.add("hidden");
-
-    if (simulateSuccess) {
-        success.classList.remove("hidden");
-    } else {
-        error.classList.remove("hidden");
-    }
-});
-
-// Buttons in success or error popup
-document
-    .querySelectorAll("#vacancy-popup-success button, #vacancy-popup-error button")
-    .forEach((btn) => {
-        btn.addEventListener("click", () => {
-            const isRetry = btn.textContent.includes("Повторить");
-
-            if (isRetry) {
-                // Show form again
-                success.classList.add("hidden");
-                error.classList.add("hidden");
-                form.classList.remove("hidden");
-            } else {
-                // Close entire popup
-                closePopup();
-            }
-        });
-    });
-
 

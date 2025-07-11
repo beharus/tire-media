@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Agency</title>
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="icon" href="/Favicon.svg" type="image/x-icon">
 </head>
 <body>
 <header class="sticky-header prime-container header">
@@ -154,9 +155,9 @@
                 </div>
                 <div class="form-checkbox-container">
                     <input type="checkbox" id="project-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                    <label for="project-consent">
-                        Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
-                        и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+                    <label for="consent" class="text-[#A6ABB3]">
+                        Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                        и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                     </label>
                 </div>
                 <button id="project-submit" type="submit" class="black-btn">Оставить заявку</button>
@@ -178,9 +179,9 @@
         </div>
     </div>
 </header>
-<main class="py-[100px] xl:py-[150px]">
-    <section class="prime-container relative mx-auto px-4 lg:px-8 ">
-    <h1 class="prime-title">
+<main class=" pt-[64px] md:pt-[95px] lg:pt-[125px]">
+    <section class="prime-container py-10 lg:py-[100px] relative mx-auto ">
+    <h1 class="prime-title px-4 lg:px-8">
         Ставим правильные <span class="italic-text">акценты</span>
         <span
                 class="flex flex-wrap justify-start gap-2 mt-6 lg:mt-0 lg:inline-flex lg:ml-10 align-bottom"
@@ -266,7 +267,7 @@
             <h2 class="h2-title">Принципы</h2>
             <p class=" big-text tracking-tight">В нашей работе мы основываемся на <span class="italic-text">инновациях,</span> анализе <span class="italic-text">потребностей</span> клиентов и командном <span class="italic-text">сотрудничестве.</span></p>
         </div>
-        <div class="z-10 flex items-center flex-col xl:flex-row gap-y-4">
+        <div class="z-10 flex mt-10 lg:mt-[100px] items-center flex-col xl:flex-row gap-y-4">
             <div class=" z-[2] w-full flex flex-col justify-between p-5 lg:p-6 max-w-[700px] h-[340px] lg:h-[440px] border border-[#CDD0D6] bg-white">
                 <div class="w-10 h-10 lg:w-[50px] lg:h-[50px] rounded-full bg-[#EDEDED]  font-semibold lg:text-[22px] flex justify-center items-center">1</div>
                 <div>
@@ -624,7 +625,7 @@
                                 </button>
                             </div>
                             <div class="toggle-content transition-all duration-500 ease-in-out overflow-hidden max-h-0  lg:text-xl leading-[1.4] text-white">
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Что вы будете делать
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -632,7 +633,7 @@
                                     <li class="ml-3">увеличение объемов работ по действующим клиентам (up-sell cross-sell)</li>
                                     <li class="ml-3">забота о клиенте и клиентском сервисе (Измерением уровня удовлетворенности клиентов и принятием соответствующих мер для его повышения)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Требования
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -640,7 +641,7 @@
                                     <li class="ml-3">развитый технический бэкграунд и понимание отрасли заказной разработки (базовое понимание технологий, понимание этапов проектов и ИТ терминологии)</li>
                                     <li class="ml-3">наличие реальных кейсов по продажам, которые есть возможность продемонстрировать на интервью (в рамках соблюдения NDA конечно)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Условия
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -681,7 +682,7 @@
                                 </button>
                             </div>
                             <div class="toggle-content transition-all duration-500 ease-in-out overflow-hidden max-h-0  lg:text-xl leading-[1.4] text-white">
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Что вы будете делать
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -689,7 +690,7 @@
                                     <li class="ml-3">увеличение объемов работ по действующим клиентам (up-sell cross-sell)</li>
                                     <li class="ml-3">забота о клиенте и клиентском сервисе (Измерением уровня удовлетворенности клиентов и принятием соответствующих мер для его повышения)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Требования
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -697,7 +698,7 @@
                                     <li class="ml-3">развитый технический бэкграунд и понимание отрасли заказной разработки (базовое понимание технологий, понимание этапов проектов и ИТ терминологии)</li>
                                     <li class="ml-3">наличие реальных кейсов по продажам, которые есть возможность продемонстрировать на интервью (в рамках соблюдения NDA конечно)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Условия
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -738,7 +739,7 @@
                                 </button>
                             </div>
                             <div class="toggle-content transition-all duration-500 ease-in-out overflow-hidden max-h-0  lg:text-xl leading-[1.4] text-white">
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Что вы будете делать
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -746,7 +747,7 @@
                                     <li class="ml-3">увеличение объемов работ по действующим клиентам (up-sell cross-sell)</li>
                                     <li class="ml-3">забота о клиенте и клиентском сервисе (Измерением уровня удовлетворенности клиентов и принятием соответствующих мер для его повышения)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Требования
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -754,7 +755,7 @@
                                     <li class="ml-3">развитый технический бэкграунд и понимание отрасли заказной разработки (базовое понимание технологий, понимание этапов проектов и ИТ терминологии)</li>
                                     <li class="ml-3">наличие реальных кейсов по продажам, которые есть возможность продемонстрировать на интервью (в рамках соблюдения NDA конечно)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Условия
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -795,7 +796,7 @@
                                 </button>
                             </div>
                             <div class="toggle-content transition-all duration-500 ease-in-out overflow-hidden max-h-0  lg:text-xl leading-[1.4] text-white">
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Что вы будете делать
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -803,7 +804,7 @@
                                     <li class="ml-3">увеличение объемов работ по действующим клиентам (up-sell cross-sell)</li>
                                     <li class="ml-3">забота о клиенте и клиентском сервисе (Измерением уровня удовлетворенности клиентов и принятием соответствующих мер для его повышения)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Требования
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -811,7 +812,7 @@
                                     <li class="ml-3">развитый технический бэкграунд и понимание отрасли заказной разработки (базовое понимание технологий, понимание этапов проектов и ИТ терминологии)</li>
                                     <li class="ml-3">наличие реальных кейсов по продажам, которые есть возможность продемонстрировать на интервью (в рамках соблюдения NDA конечно)</li>
                                 </ul>
-                                <p class="pt-5 lg:pt-10 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
+                                <p class="pt-5 lg:pt-10 border-white/30 border-t lg:text-2xl font-semibold mb-2 lg:mb-5 lg:mt-10 mt-5">
                                     Условия
                                 </p>
                                 <ul class="list-disc pl-4 list-outside space-y-2 lg:space-y-4 lg:text-xl">
@@ -830,105 +831,126 @@
 
         <!--  popup-->
         <div id="vacancy-popup-wrapper" class="fixed inset-0 z-[55] hidden">
-            <!-- Оверлей -->
-            <div id="vacancy-overlay" class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+            <!-- Overlay -->
+            <div id="vacancy-overlay" class="overlay opacity-0"></div>
 
-            <div id="vacancy-popup"
-                 class="absolute top-0 right-0 py-4 lg:py-10 px-4 lg:px-10 h-full w-full md:w-[780px] text-black bg-white shadow-xl overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out">
-                <div class="flex justify-end mb-4 lg:mb-8">
-                    <div id="vacancy-close" class="h-12 w-12 lg:w-[60px] lg:h-[60px] border rounded-full flex items-center justify-center">
-                        <img class="w-6 h-6 lg:w-8 lg:h-8" src="/main-assets/Close.svg">
+            <div id="vacancy-popup" class="project-popup text-black transform translate-x-full transition-transform duration-300 ease-in-out">
+                <div class="flex justify-end mb-2 2xl:mb-4">
+                    <div id="vacancy-close" class="h-12 w-12 2xl:w-[60px] 2xl:h-[60px] border rounded-full flex items-center justify-center">
+                        <img class="w-6 h-6 2xl:w-8 2xl:h-8" src="/main-assets/Close.svg">
                     </div>
                 </div>
                 <form>
-                    <p class=" lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Присоединиться к команде</p>
-                    <p class=" font-medium leading-[1.4] lg:text-xl mb-10">Мы всегда в поиске скилловых и талантливых коллег!</p>
-                    <div class="flex mb-5 lg:mb-9 flex-col">
-                        <label class="text-sm lg:text-lg block mb-2 lg:mb-3 font-medium">Как вас зовут?</label>
-                        <input type="text" placeholder="Иванов Иван"
-                               class="w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded" />
-                    </div>
-                    <div class="flex mb-5 lg:mb-9 flex-col">
-                        <label class="text-sm lg:text-lg block mb-2 lg:mb-3 font-medium">Как с вами связаться?</label>
-                        <input type="text" placeholder="Почта, телефон или мессенджер"
-                               class="w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded" />
-                    </div>
-                    <div class="mb-5 lg:mb-10">
-                        <label class="text-sm lg:text-lg block mb-2 lg:mb-3 font-medium">О себе</label>
-                        <textarea placeholder="Расскажите коротко о себе"
-                                  class="w-full border px-4 placeholder:text-[#CDD0D6] border-[#CDD0D6] py-3 md:px-5 md:py-4 lg:text-xl rounded h-[160px] resize-none"></textarea>
-                    </div>
-<!--                   one file Прикрепить файл should be there-->
-                    <div class="mb-5 lg:mb-10">
-                        <label class="text-sm lg:text-lg block mb-2 lg:mb-3 font-medium">Прикрепить файл</label>
+                    <p class="2xl:mb-5 font-semibold text-xl mb-3 2xl:text-[40px]">Присоединиться к команде</p>
+                    <p class="font-medium leading-[1.4] 2xl:text-20 mb-3 2xl:mb-10">Мы всегда в поиске скилловых и талантливых коллег!</p>
 
-                        <label
-                                for="file-upload"
-                                class="inline-flex items-center gap-2 cursor-pointer text-black font-medium border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition duration-300"
-                        >
-                            <!-- Paperclip Icon (SVG) -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M16.88 3.549a5.5 5.5 0 010 7.778L8.464 19.744a4 4 0 01-5.657-5.657l9.193-9.193a2.5 2.5 0 113.536 3.536l-9.193 9.193" />
-                            </svg>
-                            Прикрепить файл
-                        </label>
-
-                        <input
-                                id="file-upload"
-                                type="file"
-                                accept=".pdf,.doc,.docx"
-                                class="hidden"
-                        />
+                    <div class="flex mb-5 2xl:mb-9 flex-col">
+                        <label class="form-label">Как вас зовут?</label>
+                        <input type="text" placeholder="Иванов Иван" class="form-input" />
                     </div>
 
-                    <div class="flex items-start gap-2 text-xs lg:text-base mb-5 lg:mb-10 mt-10 lg:mt-20 font-medium">
+                    <div class="flex mb-5 2xl:mb-9 flex-col">
+                        <label class="form-label">Как с вами связаться?</label>
+                        <input type="text" placeholder="Почта, телефон или мессенджер" class="form-input" />
+                    </div>
+
+                    <div class="mb-5 2xl:mb-10">
+                        <label class="form-label">О себе</label>
+                        <textarea placeholder="Расскажите коротко о себе" class="form-input h-[160px] resize-none"></textarea>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div class="mb-5 2xl:mb-10" id="file-upload-wrapper">
+                        <label class="form-label">Прикрепить файл</label>
+                        <div class="flex items-center gap-5">
+                            <label for="file-upload" id="file-upload-label" class="inline-flex items-center gap-2 cursor-pointer text-black font-medium border border-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.88 3.549a5.5 5.5 0 010 7.778L8.464 19.744a4 4 0 01-5.657-5.657l9.193-9.193a2.5 2.5 0 113.536 3.536l-9.193 9.193" />
+                                </svg>
+                                Прикрепить файл
+                            </label>
+                            <input id="file-upload" type="file" accept=".pdf,.doc,.docx" class="hidden" />
+                            <p id="file-name" class="text-sm text-[#696969]"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-checkbox-container">
                         <input type="checkbox" id="vacancy-consent" class="mt-1 w-5 h-5 lg:w-8 lg:h-8" />
-                        <label for="project-consent">
-                            Я даю согласие на <a href="#" class="underline">обработку персональных данных</a>
-                            и ознакомлен(-а) с <a href="#" class="underline">политикой в отношении обработки персональных данных</a>
+                        <label for="vacancy-consent" class="text-[#696969]">
+                            Я даю согласие на <a href="/pages/tech-pages/consent.html" class="underline text-black">обработку персональных данных</a>
+                            и ознакомлен(-а) с <a href="/pages/tech-pages/privacy-policy.html" class="underline text-black">политикой в отношении обработки персональных данных</a>
                         </label>
                     </div>
+
                     <button id="vacancy-submit" type="submit" class="black-btn">Оставить заявку</button>
                 </form>
-                <div id="vacancy-popup-error" class="h-screen overflow-hidden -mt-20 hidden flex justify-center items-center">
+
+                <!-- Error State -->
+                <div id="vacancy-popup-error" class="h-screen overflow-hidden -mt-20 hidden justify-center items-center">
                     <div class="text-center">
-                        <p class=" lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Что-то пошло не так!</p>
-                        <p class=" font-medium leading-[1.4] lg:text-xl mb-10">Просим извинения за неудобства. Попробуйте еще раз или вернитесь позже.</p>
+                        <p class="lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Что-то пошло не так!</p>
+                        <p class="font-medium leading-[1.4] text-20 mb-10">Просим извинения за неудобства. Попробуйте еще раз или вернитесь позже.</p>
                         <button type="submit" class="black-btn">Повторить</button>
                     </div>
                 </div>
-                <div id="vacancy-popup-success" class="h-screen overflow-hidden -mt-20 hidden flex justify-center items-center">
+
+                <!-- Success State -->
+                <div id="vacancy-popup-success" class="h-screen overflow-hidden -mt-20 hidden justify-center items-center">
                     <div class="text-center">
-                        <p class=" lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Заявка офомлена успешно!</p>
-                        <p class=" font-medium leading-[1.4] lg:text-xl mb-10">Наш HR свяжется с вами в ближайшее время!</p>
+                        <p class="lg:mb-5 font-semibold text-xl mb-3 lg:text-[40px]">Заявка офомлена успешно!</p>
+                        <p class="font-medium leading-[1.4] text-20 mb-10">Наш HR свяжется с вами в ближайшее время!</p>
                         <button type="submit" class="black-btn">Хорошо</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="w-full prime-container py-10 lg:py-[100px] px-4 lg:px-8 flex-wrap flex gap-12">
-        <h2 class="lg:max-w-[300px] h2-title2">Более 100 компаний доверяют «Тире медиа»</h2>
-        <div class="w-full xl:flex-1">
+    <section class="w-full prime-container py-20 lg:pb-[100px] lg:pt-[200px] px-4 lg:px-8 flex flex-col xl:flex-row gap-12 overflow-hidden">
+        <!-- Heading -->
+        <h2 class="xl:max-w-[300px] h2-title2 shrink-0 self-start">
+            Более 100 компаний доверяют «Тире медиа»
+        </h2>
+
+        <!-- Logo Marquee -->
+        <div class="w-full flex-1">
             <section class="overflow-hidden relative w-full bg-white">
+                <!-- Left gradient mask -->
                 <div class="hidden lg:block absolute left-0 top-0 bottom-0 w-[200px] bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+
+                <!-- Scrolling logos -->
                 <div class="relative flex gap-14 whitespace-nowrap animate-marquee will-change-transform">
+                    <!-- First copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
                     <img src="/main-assets/Putzmeister.svg" class="h-11" />
                     <img src="/main-assets/Severstal.svg" class="h-11" />
-                    <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/Лукоил.svg" class="h-11" />
-                    <!-- Повтор логотипов -->
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
+
+                    <!-- Second copy -->
                     <img src="/main-assets/Bauer.svg" class="h-11" />
                     <img src="/main-assets/idg%202.svg" class="h-11" />
                     <img src="/main-assets/Kama%20tyres.svg" class="h-11" />
+                    <img src="/main-assets/Putzmeister.svg" class="h-11" />
+                    <img src="/main-assets/Severstal.svg" class="h-11" />
+                    <img src="/main-assets/Лукоил.svg" class="h-11" />
+                    <img src="/main-assets/Etaji.svg" class="h-11" />
+                    <img src="/main-assets/Beauty.svg" class="h-11" />
+                    <img src="/main-assets/Izmailovo.svg" class="h-11" />
+                    <img src="/main-assets/Mait.svg" class="h-11" />
+                    <img src="/main-assets/mazaltovman.svg" class="h-11" />
+                    <img src="/main-assets/Touchon.svg" class="h-11" />
                 </div>
             </section>
         </div>
     </section>
+
     <section class="w-full relative prime-container px-4 lg:px-8 py-10 lg:py-[100px]" >
         <h2 class="text-center big-text indent-0">Что пишут клиенты <span class="italic font-normal">о нас</span></h2>
         <div class="mt-10 lg:mt-[100px]">
@@ -1057,9 +1079,16 @@
                 </div>
 
                 <!-- Pagination (dots) -->
-                <div class="testimonial-swiper-pagination"></div>
-                <div class="swiper-button-prev !left-0 z-10" ></div>
-                <div class="swiper-button-next !right-0 z-10" ></div>
+                <div class="testimonial-swiper-pagination flex lg:hidden justify-center mt-5"></div>
+
+
+                <div class="swiper-button-prev absolute hidden lg:flex top-1/2 left-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                </div>
+
+                <div class="swiper-button-next absolute hidden lg:flex top-1/2 right-4 -translate-y-1/2 z-50 bg-white text-black w-12 h-12 items-center justify-center rounded-full shadow">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                </div>
             </div>
         </div>
     </section>
@@ -1272,10 +1301,11 @@
             <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">© 2024, Тире медиа</p>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/consent.html">Пользовательское соглашение</a>
             <a class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] hover:underline" href="/pages/tech-pages/privacy-policy.html">Политика конфиденциальности</a>
-            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3]">Разработано <a target="_blank" href="https://webest.ru/" class="text-white">WEBEST</a></p>
+            <p class="lg:text-base text-xs font-medium leading-[1.4] text-[#A6ABB3] flex items-center gap-2">Разработано <a target="_blank" href="https://webest.ru/" class="text-white"><img src="/main-assets/webest.svg"></a></p>
         </div>
     </div>
 </footer>
 </body>
+<script type="module" src="/src/js/vacancy.js"></script>
 <script type="module" src="/src/js/main.js"></script>
 </html>
