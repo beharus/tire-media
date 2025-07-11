@@ -157,4 +157,5 @@ document
         });
     });
 
+import "./main.js"
 

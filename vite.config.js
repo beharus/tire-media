@@ -17,9 +17,10 @@ export default defineConfig({
 
                 // Кейсы и блог
                 cases: resolve(__dirname, 'pages/cases/cases.html'),
-                caseDetail: resolve(__dirname, 'pages/cases/article.html'), // если есть
                 blog: resolve(__dirname, 'pages/blog/blog.html'),
-                blogDetail: resolve(__dirname, 'pages/blog/article.html'), // если есть
+                caseDetail: resolve(__dirname, 'pages/cases/article/index.html'),
+                blogDetail: resolve(__dirname, 'pages/blog/article/index.html'),
+
 
                 // SEO-продвижение
                 seoMain: resolve(__dirname, 'pages/services/seo/index.html'),

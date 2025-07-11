@@ -438,25 +438,6 @@ Fancybox.bind('[data-fancybox="testimonials"]', {
 //DROPDOWN STARTS
 
 
-//SLIDER FOR CASES ARTICLE
-document.addEventListener('DOMContentLoaded', function() {
-    const swiper = new Swiper('.cases-slider', {
-        slidesPerView: 'auto',
-        loop: true,
-        spaceBetween: 28,
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                spaceBetween: 20
-            },
-            768: {
-                slidesPerView: "auto",
-                spaceBetween: 28
-            }
-        }
-    });
-});
-
 // awars logic
 const awards = document.querySelectorAll(".awards");
 awards.forEach((award) => {
@@ -473,6 +454,33 @@ awards.forEach((award) => {
         btn.textContent = isHidden ? "Скрыть награды" : "Все награды";
     });
 });
+
+// Slider for blog article
+const track = document.querySelector('#slider-tracks');
+
+if (track) {
+    const total = track.children.length;
+    const counter = document.getElementById('counter');
+    let current = 0;
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${current * 100}%)`;
+        counter.innerHTML = `<span class="text-black">${current + 1}</span> / ${total}`;
+    }
+
+    document.getElementById('prev-btn').onclick = () => {
+        console.log(true)
+        current = (current - 1 + total) % total;
+        updateSlider();
+    };
+    document.getElementById('next-btn').onclick = () => {
+        current = (current + 1) % total;
+        updateSlider();
+    };
+
+    updateSlider();
+}
+
 
 // Cookies
 
