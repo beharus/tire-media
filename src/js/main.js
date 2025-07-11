@@ -644,15 +644,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 // links
 document.addEventListener("DOMContentLoaded", () => {
-    const linksToOpenInNewTab = [
-        "/pages/tech-pages/consent.html",
-        "/pages/tech-pages/privacy-policy.html"
-    ];
-
-    document.querySelectorAll("a").forEach(link => {
+    document.querySelectorAll("a[href]").forEach(link => {
         const href = link.getAttribute("href");
-
-        if (href && linksToOpenInNewTab.includes(href)) {
+        if (
+            href.includes("consent.html") ||
+            href.includes("privacy-policy.html")
+        ) {
             link.setAttribute("target", "_blank");
             link.setAttribute("rel", "noopener noreferrer");
         }
