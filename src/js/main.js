@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 'auto',
             spaceBetween: 64,
             speed: 4000,
+            loop: true,
             autoplay: {
                 delay: 0,
                 disableOnInteraction: false,
@@ -30,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
             freeModeMomentum: false,
             allowTouchMove: false,
             grabCursor: false,
-            loop: false,
         });
 
         marquees.push({ el: swiperEl, swiper, visible: false });
