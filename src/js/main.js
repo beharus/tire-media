@@ -642,20 +642,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             });
         });
 })
-// links
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("a[href]").forEach(link => {
-        const href = link.getAttribute("href");
-        if (
-            href.includes("consent.html") ||
-            href.includes("privacy-policy.html")
-        ) {
-            link.setAttribute("target", "_blank");
-            link.setAttribute("rel", "noopener noreferrer");
-        }
-    });
-});
-
 
 // Cookies
 const cookiesPopup = document.getElementById("cookies");
