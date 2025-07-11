@@ -33,42 +33,40 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: false,
         });
 
-        // Save reference for later use
-        marquees.push({ el: swiperEl, swiper });
+        marquees.push({ el: swiperEl, swiper, visible: false });
     });
 
-    // ✅ Intersection Observer to control autoplay based on visibility
     const observer = new IntersectionObserver(
         entries => {
             entries.forEach(entry => {
-                const marquee = marquees.find(m => m.el === entry.target);
-                if (!marquee) return;
+                const target = marquees.find(m => m.el === entry.target);
+                if (!target) return;
 
-                if (entry.isIntersecting) {
-                    marquee.swiper.autoplay?.start();
+                target.visible = entry.isIntersecting;
+
+                if (entry.isIntersecting && document.visibilityState === 'visible') {
+                    target.swiper.autoplay?.start();
                 } else {
-                    marquee.swiper.autoplay?.stop();
+                    target.swiper.autoplay?.stop();
                 }
             });
         },
-        {
-            threshold: 0.1 // Trigger when at least 10% is visible
-        }
+        { threshold: 0.1 }
     );
 
-    marquees.forEach(marquee => observer.observe(marquee.el));
+    marquees.forEach(m => observer.observe(m.el));
 
-    // ✅ Restart autoplay when tab becomes visible
     document.addEventListener('visibilitychange', () => {
-        if (document.visibilityState === 'visible') {
-            marquees.forEach(({ swiper }) => {
+        const isVisible = document.visibilityState === 'visible';
+        marquees.forEach(({ swiper, visible }) => {
+            if (isVisible && visible) {
+                setTimeout(() => swiper.autoplay?.start(), 100);
+            } else {
                 swiper.autoplay?.stop();
-                swiper.autoplay?.start();
-            });
-        }
+            }
+        });
     });
 });
-
 
 
 // HEADER STARTS
